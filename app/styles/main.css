@@ -623,7 +623,7 @@ input[type="date"].full:before {
 }
 
 .iconNav {
-    margin: 17px;
+    margin: 10px 15px 10px 10px;
     vertical-align: middle;
 }
 
@@ -632,7 +632,10 @@ input[type="date"].full:before {
     color: #fff;
 }
 
-
+.btnEmpresa{
+    background: transparent;
+    border: none;
+}
 /*SIDEBAR DOS*/
 
 .menuDos {

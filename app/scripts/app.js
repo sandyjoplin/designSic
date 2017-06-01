@@ -71,6 +71,11 @@ angular
                 controller: 'SolicitudesCtrl',
                 controllerAs: 'solicitudes'
             })
+            .when('/calendario', {
+              templateUrl: 'views/calendario.html',
+              controller: 'CalendarioCtrl',
+              controllerAs: 'calendario'
+            })
             .otherwise({
                 redirectTo: '/'
             });
