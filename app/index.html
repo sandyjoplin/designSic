@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bienvenido a Sicamsa">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <meta property="og:image" content="img-meta.png" />
+    <title>Sicamsa </title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/hover.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://use.fontawesome.com/cdc6b91eaf.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body ng-app="sicamsaApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div ng-controller="LoaderCtrl" ng-show="loader" style="z-index:8888; position: relative;left: 0;top: 0;right:0;bottom:0;">
+        <div class="contenedorLoader" ng-class="loaderClass">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -10" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="logo hidden-xs">
+            <a href="#/"><img src="images/logo.png" alt="logo" class="logoNav center-block img-responsive">
+            </a>
+        </div>
+        <div class="menuUno hidden-xs">
+            <div class="itemNav">
+                <i class="fa fa-building fa-lg iconNav" aria-hidden="true"></i> SICAMSA
+            </div>
+            <div class="itemNav">
+                <i class="fa fa-building fa-lg iconNav" aria-hidden="true"></i> ALBATROZ
+            </div>
+            <div class="itemNav">
+                <i class="fa fa-building fa-lg iconNav" aria-hidden="true"></i> WER
+            </div>
+        </div>
+        <div class="menuDos hidden-xs">
+            <ul class="list-group">
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#administrador" aria-expanded="false" aria-controls="recursosHumanos">
+                    <i class="fa fa-user fa-lg menuItem" aria-hidden="true"></i> Administrador<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="administrador">
+                    <ul class="submenu">
+                        <li class=""><a href="#/administrador">Administradores</a></li>
+                        <li class=""><a href="#/Solicitudes">Solicitudes</a></li>
+                        <li class=""><a href="#/catalogos">Catalogos</a></li>
+                    </ul>
+                </div>
+
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#recursosHumanos" aria-expanded="false" aria-controls="recursosHumanos">
+                    <i class="fa fa-users fa-lg menuItem" aria-hidden="true"></i>Recursos Humanos<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="recursosHumanos">
+                    <ul class="submenu">
+                        <li class=""><a href="#/personal">Personal</a></li>
+                        <li class=""><a href="#/">Nomina</a></li>
+                        <li class=""><a href="">Permisos</a></li>
+                        <li class=""><a href="">Calendario</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#ventas" aria-expanded="false" aria-controls="facturacion">
+                    <i class="fa fa-shopping-cart fa-lg menuItem" aria-hidden="true"></i>Ventas<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="ventas">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus ventas</a></li>
+                        <li class=""><a href="">Menus ventas</a></li>
+                        <li class=""><a href="">Menus ventas</a></li>
+                        <li class=""><a href="">Menus ventas</a></li>
+                    </ul>
+                </div>
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#facturacion" aria-expanded="false" aria-controls="facturacion">
+                    <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturacion<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="facturacion">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus facturacion</a></li>
+                        <li class=""><a href="">Menus facturacion</a></li>
+                        <li class=""><a href="">Menus facturacion</a></li>
+                        <li class=""><a href="">Menus facturacion</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#operaciones" aria-expanded="false" aria-controls="operaciones">
+                    <i class="fa fa-file-text fa-lg menuItem" aria-hidden="true"></i>Operaciones<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="operaciones">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus operaciones</a></li>
+                        <li class=""><a href="">Menus operaciones</a></li>
+                        <li class=""><a href="">Menus operaciones</a></li>
+                        <li class=""><a href="">Menus operaciones</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#trafico" aria-expanded="false" aria-controls="trafico">
+                    <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Trafico<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="trafico">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus trafico</a></li>
+                        <li class=""><a href="">Menus trafico</a></li>
+                        <li class=""><a href="">Menus trafico</a></li>
+                        <li class=""><a href="">Menus trafico</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#mensajeria" aria-expanded="false" aria-controls="mensajeria">
+                    <i class="fa fa-envelope fa-lg menuItem" aria-hidden="true"></i>Mensajeria<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="mensajeria">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus mensajeria</a></li>
+                        <li class=""><a href="">Menus mensajeria</a></li>
+                        <li class=""><a href="">Menus mensajeria</a></li>
+                        <li class=""><a href="">Menus mensajeria</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#contabilidad" aria-expanded="false" aria-controls="contabilidad">
+                    <i class="fa fa-calculator fa-lg menuItem" aria-hidden="true"></i>Contabilidad<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="contabilidad">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus contabilidad</a></li>
+                        <li class=""><a href="">Menus contabilidad</a></li>
+                        <li class=""><a href="">Menus contabilidad</a></li>
+                        <li class=""><a href="">Menus contabilidad</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#calidad" aria-expanded="false" aria-controls="calidad">
+                    <i class="fa fa-check-circle fa-lg menuItem" aria-hidden="true"></i>Calidad<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="calidad">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus calidad</a></li>
+                        <li class=""><a href="">Menus calidad</a></li>
+                        <li class=""><a href="">Menus calidad</a></li>
+                        <li class=""><a href="">Menus calidad</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#mantenimiento" aria-expanded="false" aria-controls="mantenimiento">
+                    <i class="fa fa-wrench fa-lg menuItem" aria-hidden="true"></i>Mantenimiento<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="mantenimiento">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus mantenimiento</a></li>
+                        <li class=""><a href="">Menus mantenimiento</a></li>
+                        <li class=""><a href="">Menus mantenimiento</a></li>
+                        <li class=""><a href="">Menus mantenimiento</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#almacen" aria-expanded="false" aria-controls="almacen">
+                    <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacen<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="almacen">
+                    <ul class="submenu">
+                        <li><a href="">Menus almacen</a></li>
+                        <li><a href="">Menus almacen</a></li>
+                        <li><a href="">Menus almacen</a></li>
+                        <li><a href="">Menus almacen</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+                <li class="list-group-item menu" data-toggle="collapse" data-target="#vigilancia" aria-expanded="false" aria-controls="vigilancia">
+                    <i class="fa fa-eye fa-lg menuItem" aria-hidden="true"></i>Vigilancia<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="vigilancia">
+                    <ul class="submenu">
+                        <li class=""><a href="">Menus vigilancia</a></li>
+                        <li class=""><a href="">Menus vigilancia</a></li>
+                        <li class=""><a href="">Menus vigilancia</a></li>
+                        <li class=""><a href="">Menus vigilancia</a></li>
+                    </ul>
+                </div>
+                <!--menu secundario-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="navBar">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class=" visible-xs" href="#/"><img src="images/logo.png" class="logoNav1" alt=""></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown visible-xs">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" style="height: 60px;"><i class="fa fa-building" aria-hidden="true"></i> Empresa<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-user"></i> SICAMSA</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> ALBATROZ</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> WER</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" style="height: 60px;">
+                        <i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="">Alerta  <span class="label label-default ">1</span></a>
+                        </li>
+                        <li>
+                            <a href="">Alerta  <span class="label label-primary">1</span></a>
+                        </li>
+                        <li>
+                            <a href="">Alerta  <span class="label label-success">1</span></a>
+                        </li>
+                        <li>
+                            <a href="">Alerta <span class="label label-info">1</span></a>
+                        </li>
+                        <li>
+                            <a href="">Alerta <span class="label label-warning">1</span></a>
+                        </li>
+                        <li>
+                            <a href="">Alerta <span class="label label-danger">1</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="">Ver todo</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="images/profile.png" class="imgProfile" alt=""> Sandra juarez <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#/perfil"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> Mensajes</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> Configuración</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="" class="textDelete"><i class="fa fa-fw fa-power-off"></i> Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- /.navbar-collapse -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav list-group visible-xs">
+                      <li class="list-group-item menu" data-toggle="collapse" data-target="#administradorUno" aria-expanded="false" aria-controls="recursosHumanos">
+                    <i class="fa fa-user fa-lg menuItem" aria-hidden="true"></i> Administrador<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+
+                </li>
+                <!--menu secundario-->
+                <div class="collapse" id="administradorUno">
+                    <ul class="submenu">
+                        <li class=""><a href="#/administrador">Administradores</a></li>
+                        <li class=""><a href="#/catalogos">Catalogos</a></li>
+                    </ul>
+                </div>
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#recursosHumanosUno" aria-expanded="false" aria-controls="recursosHumanos">
+                        <i class="fa fa-users fa-lg menuItem" aria-hidden="true"></i>Recursos Humanos<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="recursosHumanosUno">
+                        <ul class="submenu">
+                            <li class=""><a href="#/personal">Personal</a></li>
+                            <li class=""><a href="">Nomina</a></li>
+                            <li class=""><a href="">Permisos</a></li>
+                            <li class=""><a href="">Calendario</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#ventasUno" aria-expanded="false" aria-controls="facturacion">
+                        <i class="fa fa-shopping-cart fa-lg menuItem" aria-hidden="true"></i>Ventas<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="ventasUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus ventas</a></li>
+                            <li class=""><a href="">Menus ventas</a></li>
+                            <li class=""><a href="">Menus ventas</a></li>
+                            <li class=""><a href="">Menus ventas</a></li>
+                        </ul>
+                    </div>
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#facturacionUno" aria-expanded="false" aria-controls="facturacion">
+                        <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturacion<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="facturacionUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus facturacion</a></li>
+                            <li class=""><a href="">Menus facturacion</a></li>
+                            <li class=""><a href="">Menus facturacion</a></li>
+                            <li class=""><a href="">Menus facturacion</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#operacionesUno" aria-expanded="false" aria-controls="operaciones">
+                        <i class="fa fa-file-text fa-lg menuItem" aria-hidden="true"></i>Operaciones<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="operacionesUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus operaciones</a></li>
+                            <li class=""><a href="">Menus operaciones</a></li>
+                            <li class=""><a href="">Menus operaciones</a></li>
+                            <li class=""><a href="">Menus operaciones</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#traficoUno" aria-expanded="false" aria-controls="trafico">
+                        <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Trafico<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="traficoUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus trafico</a></li>
+                            <li class=""><a href="">Menus trafico</a></li>
+                            <li class=""><a href="">Menus trafico</a></li>
+                            <li class=""><a href="">Menus trafico</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#mensajeriaUno" aria-expanded="false" aria-controls="mensajeria">
+                        <i class="fa fa-envelope fa-lg menuItem" aria-hidden="true"></i>Mensajeria<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="mensajeriaUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus mensajeria</a></li>
+                            <li class=""><a href="">Menus mensajeria</a></li>
+                            <li class=""><a href="">Menus mensajeria</a></li>
+                            <li class=""><a href="">Menus mensajeria</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#contabilidadUno" aria-expanded="false" aria-controls="contabilidad">
+                        <i class="fa fa-calculator fa-lg menuItem" aria-hidden="true"></i>Contabilidad<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="contabilidadUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus contabilidad</a></li>
+                            <li class=""><a href="">Menus contabilidad</a></li>
+                            <li class=""><a href="">Menus contabilidad</a></li>
+                            <li class=""><a href="">Menus contabilidad</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#calidadUno" aria-expanded="false" aria-controls="calidad">
+                        <i class="fa fa-check-circle fa-lg menuItem" aria-hidden="true"></i>Calidad<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="calidadUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus calidad</a></li>
+                            <li class=""><a href="">Menus calidad</a></li>
+                            <li class=""><a href="">Menus calidad</a></li>
+                            <li class=""><a href="">Menus calidad</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#mantenimientoUno" aria-expanded="false" aria-controls="mantenimiento">
+                        <i class="fa fa-wrench fa-lg menuItem" aria-hidden="true"></i>Mantenimiento<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="mantenimientoUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus mantenimiento</a></li>
+                            <li class=""><a href="">Menus mantenimiento</a></li>
+                            <li class=""><a href="">Menus mantenimiento</a></li>
+                            <li class=""><a href="">Menus mantenimiento</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#almacenUno" aria-expanded="false" aria-controls="almacen">
+                        <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacen<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="almacenUno">
+                        <ul class="submenu">
+                            <li><a href="">Menus almacen</a></li>
+                            <li><a href="">Menus almacen</a></li>
+                            <li><a href="">Menus almacen</a></li>
+                            <li><a href="">Menus almacen</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                    <li class="list-group-item menu" data-toggle="collapse" data-target="#vigilanciaUno" aria-expanded="false" aria-controls="vigilancia">
+                        <i class="fa fa-eye fa-lg menuItem" aria-hidden="true"></i>Vigilancia<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                    </li>
+                    <!--menu secundario-->
+                    <div class="collapse" id="vigilanciaUno">
+                        <ul class="submenu">
+                            <li class=""><a href="">Menus vigilancia</a></li>
+                            <li class=""><a href="">Menus vigilancia</a></li>
+                            <li class=""><a href="">Menus vigilancia</a></li>
+                            <li class=""><a href="">Menus vigilancia</a></li>
+                        </ul>
+                    </div>
+                    <!--menu secundario-->
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="vistas" ng-view="">
+
+    </div>
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        ! function (A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jsSHA/src/sha.js"></script>
+    <script src="bower_components/ngprogress/build/ngprogress.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/personal.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/services/sha256.js"></script>
+    <script src="scripts/controllers/loader.js"></script>
+    <script src="scripts/services/loaderservice.js"></script>
+    <script src="scripts/services/ep.js"></script>
+    <script src="scripts/controllers/admin.js"></script>
+    <script src="scripts/controllers/menu.js"></script>
+    <script src="scripts/services/permisos.js"></script>
+    <script src="scripts/controllers/administrador.js"></script>
+    <script src="scripts/controllers/catalogos.js"></script>
+    <script src="scripts/controllers/perfil.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

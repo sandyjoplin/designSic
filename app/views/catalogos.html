@@ -1,0 +1,166 @@
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Catalogos</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                    <button class="btn btns1 width100" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Puestos
+                  </button>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="">
+                            <ul class="list-group">
+                                <li class="list-group-item text-center">
+
+                                    <div class="textNew" role="button" data-toggle="collapse" href="#collapseNew" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus-square" aria-hidden="true"></i> Nuevo</div>
+                                    <div class="collapse" id="collapseNew">
+                                        <div class="well">
+                                            <form name="" class="">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model=".nombre" placeholder="Nombre">
+                                                        <p class="textValid1 text-center" ng-show=".nombre.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="salario" name="salario" required ng-model=".salario" placeholder="Salario">
+                                                        <p class="textValid1 text-center" ng-show=".salario.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <button type="submit" ng-click="" ng-disabled=".$invalid" class="btn btns width100 ">Guardar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="checkbox7" type="checkbox">
+                                        <label for="checkbox2" class="textPuesto1">
+                                            Gerente general
+                                        </label>
+                                    </div>
+                                    <p class="textSalario"> $25613</p>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <div class="textEdit" role="button" data-toggle="collapse" href="#collapseEdit" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <a class="textDelete" data-toggle="modal" data-target="#eliminar"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="collapseEdit">
+                                        <div class="well">
+                                            <form name="formEmpleado" class="">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre">
+                                                        <p class="textValid1 text-center" ng-show="formEmpleado.nombre.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="salario" name="salario" required ng-model="datos.salario" placeholder="Salario">
+                                                        <p class="textValid1 text-center" ng-show="formEmpleado.salario.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formEmpleado.$invalid" class="btn btns width100 ">Guardar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="checkbox7" type="checkbox">
+                                        <label for="checkbox2" class="textPuesto1">
+                                            Gerente general
+                                        </label>
+                                    </div>
+                                    <p class="textSalario"> $25613</p>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <div class="textEdit" role="button" data-toggle="collapse" href="#collapseEdit1" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <a class="textDelete" data-toggle="modal" data-target="#eliminar"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="collapseEdit1">
+                                        <div class="well">
+                                            <form name="" class="">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model=".nombre" placeholder="Nombre">
+                                                        <p class="textValid1 text-center" ng-show=".nombre.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="salario" name="salario" required ng-model=".salario" placeholder="Salario">
+                                                        <p class="textValid1 text-center" ng-show=".salario.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <button type="submit" ng-click="" ng-disabled=".$invalid" class="btn btns width100 ">Guardar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="checkbox7" type="checkbox">
+                                        <label for="checkbox2" class="textPuesto1">
+                                            Gerente general
+                                        </label>
+                                    </div>
+                                    <p class="textSalario"> $25613</p>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <div class="textEdit" role="button" data-toggle="collapse" href="#collapseEdit2" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <a href="" class="textDelete" data-toggle="modal" data-target="#eliminar"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="collapseEdit2">
+                                        <div class="well">
+                                            <form name="" class="">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model=".nombre" placeholder="Nombre">
+                                                        <p class="textValid1 text-center" ng-show=".nombre.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-inputs" id="salario" name="salario" required ng-model=".salario" placeholder="Salario">
+                                                        <p class="textValid1 text-center" ng-show=".salario.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                    <button type="submit" ng-click="" ng-disabled=".$invalid" class="btn btns width100 ">Guardar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Nuevo Empleado -->
+<div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center textNew">Se eliminará este elemento</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left">Aceptar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

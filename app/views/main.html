@@ -1,0 +1,292 @@
+<div class="backWhite1">
+    <div class="backEmpresa">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="textEmpresa"><i class="fa fa-circle activo" aria-hidden="true"></i>  SICAMSA</h1>
+        </div>
+    </div>
+</div>
+<div class="marcoLogo">
+    <img src="images/logo.png" alt="logo" class="center-block imgLogo1">
+</div>
+<br>
+
+<section class="container-fluid marginRow backWhite1">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h2 class="title1">Información</h2>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <br>
+            <button type="button" class="btn btns pull-right" data-toggle="modal" data-target="#editarInfo"><i class="fa fa-pencil-square fa-lg" aria-hidden="true"></i> Editar</button>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="miTab tabDefault">
+            <li class="col33 text-center" ng-click="tabUnofn()">
+                <a href="">
+                    <i class="fa fa-info fa-lg" aria-hidden="true"></i> Descripción
+                </a>
+            </li>
+            <li class="col33 text-center" ng-click="tabDosfn()">
+                <a href="">
+                    <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Dónde estamos
+                </a>
+            </li>
+            <li class="col33 text-center" ng-click="tabTresfn()">
+                <a href="">
+                    <i class="fa fa-phone fa-lg" aria-hidden="true"></i> Contacto
+                </a>
+            </li>
+        </ul>
+    </div>
+ 
+    <div class="row">
+        <div class="col-lg-12">
+            <div ng-show="tabU">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h4 class="titleTab">ID</h4>
+                        <p class="textTab">#786783G3</p>
+                        <h4 class="titleTab">Razón social</h4>
+                        <p class="textTab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <h4 class="titleTab">RFC</h4>
+                        <p class="textTab">RFSTDVSSVSVSHDVSDH</p>
+                        <h4 class="titleTab">Sobre nosotros</h4>
+                        <p class="textTab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quas officia sed magni accusantium odit delectus ipsa architecto neque voluptas ad unde, odio corrupti animi nisi sit quam deserunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, veniam, mollitia. Hic saepe voluptate magnam ducimus obcaecati libero, veritatis explicabo aperiam est. Excepturi consequatur quod maiores, quaerat libero ullam molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque laudantium fugiat soluta molestias non odio dolore eaque neque, cumque culpa, ullam rerum dolor debitis perferendis at, laboriosam sunt, autem odit!</p>
+                    </div>
+                </div>
+            </div> 
+            <div ng-show="tabD">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h4 class="titleTab">Dirección empresa</h4>
+                    <p class="textTab"> Av. Tlalnepantla No. 24 Col. Prado Ixtacala 54160 Estado de México</p>
+                    <h4 class="titleTab">Dirección Fiscal</h4>
+                    <p class="textTab"> Av. Tlalnepantla No. 24 Col. Prado Ixtacala 54160 Estado de México</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.495244236226!2d-99.17315434956615!3d19.520340442862818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f81ed1682e13%3A0xb3eb956cf8c20b5!2sAv.+Tlalnepantla+24%2C+Prado+Ixtacala%2C+54160+Tlalnepantla%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1495491905269" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div ng-show="tabT">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h4 class="titleTab">Telefono</h4>
+                    <p class="textTab">008728163721</p>
+                    <h4 class="titleTab">Extensión</h4>
+                    <p class="textTab">0732</p>
+                    <h4 class="titleTab">Correo</h4>
+                    <p class="textTab">sicamsa@sicamsa.com</p>
+                    <h4 class="titleTab">Sitio web</h4>
+                    <p class="textTab"><a target="_blank" href="https://www.gruposicamsa.com/">www.gruposicamsa.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal Nuevo Empleado -->
+<div class="modal fade" id="editarInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="title">INFORMACIÓN DE LA EMPRESA</h1>
+            </div>
+            <div class="modal-body">
+                <section class="container-fluid  marginRow backWhite1">
+                    <div class="row animated fadeInUp">
+                        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                            <h2 class="title1">Información General</h2>
+                            <form name="formEmpresa" class="">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="empresa" id="empresa" required ng-model="datos.empresa">
+                                                <option value="">Empresa</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.empresa.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="rfc" name="rfc" required ng-model="datos.rfc" placeholder="RFC Empresa">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.rfc.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="razon" name="razon" required ng-model="datos.razon" placeholder="Razón Social">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.razon.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea type="text" class="form-inputs" id="descripcion" name="descripcion" required ng-model="datos.descripcion" placeholder="Descripción de la Empresa" cols="30" rows="5" style="height:100px;"></textarea>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.descripcion.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="title1">Domicilio de la Empresa</h2>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="calle" name="calle" required ng-model="datos.calle" placeholder="Calle">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.calle.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad">
+                                                <option value="">Ciudad</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.ciudad.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado">
+                                                <option value="">Estado</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.estado.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais">
+                                                <option value="">Pais</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.pais.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="telefono" name="telefono" required ng-model="datos.telefono" placeholder="Teléfono">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.telefono.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-inputs" id="exterior" name="exterior" required ng-model="datos.exterior" placeholder="No. Ext">
+                                                    <p class="textValid1 text-center" ng-show="formEmpresa.exterior.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-inputs" id="interior" name="interior" required ng-model="datos.interior" placeholder="No. Int">
+                                                    <p class="textValid1 text-center" ng-show="formEmpresa.interior.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia">
+                                                <option value="">Colonia</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.colonia.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="cp" name="cp" required ng-model="datos.cp" placeholder="Código Postal">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.cp.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento">
+                                                <option name="" value="">Tipo de asentamiento</option>
+                                                <option name="opcion" value="opcion">Opcion 1</option>
+                                                <option name="opcion" value="opcion">Opcion 2</option>
+                                                <option name="opcion" value="opcion">Opcion 3</option>
+                                                <option name="opcion" value="opcion">Opcion </option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.asentamiento.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.extension.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="title1">Domicilio Fiscal de la Empresa</h2>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="calleUno" name="calleUno" required ng-model="datos.calleUno" placeholder="Calle">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.calleUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="ciudadUno" id="ciudadUno" required ng-model="datos.ciudadUno">
+                                                <option value="">Ciudad</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.ciudadUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="estadoUno" id="estadoUno" required ng-model="datos.estadoUno">
+                                                <option value="">Estado</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.estadoUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="paisUno" id="paisUno" required ng-model="datos.paisUno">
+                                                <option value="">País</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.paisUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="telefonoUno" name="telefonoUno" required ng-model="datos.telefonoUno" placeholder="Teléfono">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.telefonoUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-inputs" id="exteriorUno" name="exteriorUno" required ng-model="datos.exteriorUno" placeholder="No. Ext">
+                                                    <p class="textValid1 text-center" ng-show="formEmpresa.exteriorUno.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-inputs" id="interiorUno" name="interiorUno" required ng-model="datos.interiorUno" placeholder="No. Int">
+                                                    <p class="textValid1 text-center" ng-show="formEmpresa.interiorUno.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="coloniaUno" id="coloniaUno" required ng-model="datos.coloniaUno">
+                                                <option value="">Estado</option>
+                                                <option name="" value="opcion"></option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.coloniaUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="cpUno" name="cpUno" required ng-model="datos.cpUno" placeholder="Código Postal">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.cpUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="asentamientoUno" name="asentamientoUno" class="form-inputs" required ng-model="datos.asentamientoUno">
+                                                <option name="" value="">Tipo de asentamiento</option>
+                                                <option name="opcion" value="opcion">Opcion 1</option>
+                                                <option name="opcion" value="opcion">Opcion 2</option>
+                                                <option name="opcion" value="opcion">Opcion 3</option>
+                                                <option name="opcion" value="opcion">Opcion 4</option>
+                                            </select>
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.asentamientoUno.$error.required">Campo obligatorio</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="extensionUno" name="extensionUno" required ng-model="datos.extensionUno" placeholder="Extensión">
+                                            <p class="textValid1 text-center" ng-show="formEmpresa.extensionUno.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formEmpresa.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow " data-dismiss="modal">Cerrar</button>
+                <!--<button type="button" class="btn btn-primary">Guardar</button>-->
+            </div>
+        </div>
+    </div>
+</div>
