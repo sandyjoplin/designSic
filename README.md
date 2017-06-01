@@ -14,4 +14,4 @@ para instalar las dependencias de bower `bower install` para instalar las depend
 
 ## pruebas
 
-prueba verga
+
