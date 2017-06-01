@@ -1,0 +1,5 @@
+{
+  "name": "calendarioMobi",
+  "author": "eduin garnica <eduin.garnica@atomickst.com>",
+  "main": ["dist/mobiscroll.custom-3.1.0.min.css","dist/mobiscroll.custom-3.1.0.min.js"]
+}

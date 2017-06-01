@@ -10,25 +10,27 @@
  */
 angular
     .module('sicamsaApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ngProgress',
-    'ngStorage'
-  ])
+        'ngAnimate',
+        'ngAria',
+        'ngCookies',
+        'ngMessages',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ngProgress',
+        'ngStorage',
+        'mobiscroll-eventcalendar',
+        'mobiscroll-calendar'
+    ])
     .config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix("");
         $routeProvider
-        /* .when('/', {
-                templateUrl: 'views/login.html',
-                controller: 'LoginCtrl',
-                controllerAs: 'login'
-            })*/
+            /* .when('/', {
+                    templateUrl: 'views/login.html',
+                    controller: 'LoginCtrl',
+                    controllerAs: 'login'
+                })*/
             .when('/', {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl',
@@ -39,7 +41,7 @@ angular
                 controller: 'PersonalCtrl',
                 controllerAs: 'personal'
             })
-        .when('/login', {
+            .when('/login', {
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl',
                 controllerAs: 'login'
@@ -50,24 +52,30 @@ angular
                 controllerAs: 'admin'
             })
             .when('/administrador', {
-              templateUrl: 'views/administrador.html',
-              controller: 'AdministradorCtrl',
-              controllerAs: 'administrador'
+                templateUrl: 'views/administrador.html',
+                controller: 'AdministradorCtrl',
+                controllerAs: 'administrador'
             })
             .when('/catalogos', {
-              templateUrl: 'views/catalogos.html',
-              controller: 'CatalogosCtrl',
-              controllerAs: 'catalogos'
+                templateUrl: 'views/catalogos.html',
+                controller: 'CatalogosCtrl',
+                controllerAs: 'catalogos'
             })
             .when('/perfil', {
-              templateUrl: 'views/perfil.html',
-              controller: 'PerfilCtrl',
-              controllerAs: 'perfil'
+                templateUrl: 'views/perfil.html',
+                controller: 'PerfilCtrl',
+                controllerAs: 'perfil'
+            })
+            .when('/solicitudes', {
+                templateUrl: 'views/solicitudes.html',
+                controller: 'SolicitudesCtrl',
+                controllerAs: 'solicitudes'
             })
             .otherwise({
                 redirectTo: '/'
             });
     }).config(['$localStorageProvider',
-    function ($localStorageProvider) {
+        function ($localStorageProvider) {
             $localStorageProvider.setKeyPrefix('SCS');
-    }])
+        }
+    ])

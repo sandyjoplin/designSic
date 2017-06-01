@@ -670,7 +670,7 @@
                                         </div>
                                         <div class="col-lg-6 col-mf-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
+                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoUno"  required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
@@ -678,18 +678,18 @@
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.rfc.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
+                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoDos" required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.vigencia.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="nacimiento" id="nacimiento" required ng-model="datos.nacimiento">
+                                                <select class="form-inputs center-block" name="lugarNacimiento" id="lugarNacimiento" required ng-model="datos.lugarNacimiento">
                                                     <option value="">Lugar de nacimiento</option>
                                                     <option value="opciones">CDMX</option>
                                                     <option value="opciones">Puebla</option>
                                                     <option value="opciones">Tabasco</option>
                                                     <option value="opciones">Guadalajara</option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.lugarNacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="tratamiento" name="tratamiento" required ng-model="datos.tratamiento" placeholder="Tratamiento">
@@ -809,8 +809,8 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Contratación ">
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <input type="date" class="form-inputs" id="contratacion" name="contratacion" mobiscroll-calendar="settingsInput" required ng-model="datos.contratacion" placeholder="Fecha de Contratación ">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.contratacion.$error.required">Campo obligatorio</p>
                                             </div>
 
                                             <div class="form-group">

@@ -14,6 +14,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+    <link rel="stylesheet" href="bower_components/calendarioMobi/dist/mobiscroll.custom-3.1.0.min.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbuild -->
@@ -72,13 +73,12 @@
             <ul class="list-group">
                 <li class="list-group-item menu" data-toggle="collapse" data-target="#administrador" aria-expanded="false" aria-controls="recursosHumanos">
                     <i class="fa fa-user fa-lg menuItem" aria-hidden="true"></i> Administrador<i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
-
                 </li>
                 <!--menu secundario-->
                 <div class="collapse" id="administrador">
                     <ul class="submenu">
                         <li class=""><a href="#/administrador">Administradores</a></li>
-                        <li class=""><a href="#/Solicitudes">Solicitudes</a></li>
+                        <li class=""><a href="#/solicitudes">Solicitudes</a></li>
                         <li class=""><a href="#/catalogos">Catalogos</a></li>
                     </ul>
                 </div>
@@ -507,6 +507,7 @@
     <script src="bower_components/jsSHA/src/sha.js"></script>
     <script src="bower_components/ngprogress/build/ngprogress.min.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/calendarioMobi/dist/mobiscroll.custom-3.1.0.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -525,6 +526,7 @@
     <script src="scripts/controllers/administrador.js"></script>
     <script src="scripts/controllers/catalogos.js"></script>
     <script src="scripts/controllers/perfil.js"></script>
+    <script src="scripts/controllers/solicitudes.js"></script>
     <!-- endbuild -->
 </body>
 
