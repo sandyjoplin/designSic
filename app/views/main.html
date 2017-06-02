@@ -3,7 +3,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <h1 class="textEmpresa"><i class="fa fa-circle activo" aria-hidden="true"></i>  SICAMSA</h1>
+            <h1 class="textEmpresa"><i class="fa fa-circle activo" aria-hidden="true"></i> SICAMSA</h1>
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@
             </li>
         </ul>
     </div>
- 
+
     <div class="row">
         <div class="col-lg-12">
             <div ng-show="tabU">
@@ -54,17 +54,24 @@
                         <h4 class="titleTab">RFC</h4>
                         <p class="textTab">RFSTDVSSVSVSHDVSDH</p>
                         <h4 class="titleTab">Sobre nosotros</h4>
-                        <p class="textTab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quas officia sed magni accusantium odit delectus ipsa architecto neque voluptas ad unde, odio corrupti animi nisi sit quam deserunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, veniam, mollitia. Hic saepe voluptate magnam ducimus obcaecati libero, veritatis explicabo aperiam est. Excepturi consequatur quod maiores, quaerat libero ullam molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque laudantium fugiat soluta molestias non odio dolore eaque neque, cumque culpa, ullam rerum dolor debitis perferendis at, laboriosam sunt, autem odit!</p>
+                        <p class="textTab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quas officia sed magni accusantium
+                            odit delectus ipsa architecto neque voluptas ad unde, odio corrupti animi nisi sit quam deserunt
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, veniam, mollitia. Hic saepe
+                            voluptate magnam ducimus obcaecati libero, veritatis explicabo aperiam est. Excepturi consequatur
+                            quod maiores, quaerat libero ullam molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Atque laudantium fugiat soluta molestias non odio dolore eaque neque, cumque culpa, ullam
+                            rerum dolor debitis perferendis at, laboriosam sunt, autem odit!</p>
                     </div>
                 </div>
-            </div> 
+            </div>
             <div ng-show="tabD">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h4 class="titleTab">Dirección empresa</h4>
                     <p class="textTab"> Av. Tlalnepantla No. 24 Col. Prado Ixtacala 54160 Estado de México</p>
                     <h4 class="titleTab">Dirección Fiscal</h4>
                     <p class="textTab"> Av. Tlalnepantla No. 24 Col. Prado Ixtacala 54160 Estado de México</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.495244236226!2d-99.17315434956615!3d19.520340442862818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f81ed1682e13%3A0xb3eb956cf8c20b5!2sAv.+Tlalnepantla+24%2C+Prado+Ixtacala%2C+54160+Tlalnepantla%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1495491905269" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.495244236226!2d-99.17315434956615!3d19.520340442862818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f81ed1682e13%3A0xb3eb956cf8c20b5!2sAv.+Tlalnepantla+24%2C+Prado+Ixtacala%2C+54160+Tlalnepantla%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1495491905269"
+                        width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
             <div ng-show="tabT">
@@ -101,7 +108,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select class="form-inputs center-block" name="empresa" id="empresa" required ng-model="datos.empresa">
+                                            <select class="form-inputs center-block" name="empresa" id="empresa" required ng-model="datos.empresa" mobiscroll-select="settingsSelect">
                                                 <option value="">Empresa</option>
                                                 <option name="" value="opcion"></option>
                                             </select>
@@ -116,7 +123,8 @@
                                             <p class="textValid1 text-center" ng-show="formEmpresa.razon.$error.required">Campo obligatorio</p>
                                         </div>
                                         <div class="form-group">
-                                            <textarea type="text" class="form-inputs" id="descripcion" name="descripcion" required ng-model="datos.descripcion" placeholder="Descripción de la Empresa" cols="30" rows="5" style="height:100px;"></textarea>
+                                            <textarea type="text" class="form-inputs" id="descripcion" name="descripcion" required ng-model="datos.descripcion" placeholder="Descripción de la Empresa"
+                                                cols="30" rows="5" style="height:100px;"></textarea>
                                             <p class="textValid1 text-center" ng-show="formEmpresa.descripcion.$error.required">Campo obligatorio</p>
                                         </div>
                                     </div>

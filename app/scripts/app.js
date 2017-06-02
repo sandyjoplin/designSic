@@ -21,7 +21,9 @@ angular
         'ngProgress',
         'ngStorage',
         'mobiscroll-eventcalendar',
-        'mobiscroll-calendar'
+        'mobiscroll-calendar',
+        'mobiscroll-select',
+        'mobiscroll-form'
     ])
     .config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix("");

@@ -33,4 +33,5 @@ angular.module('sicamsaApp')
             $scope.tabD = false;
             $scope.tabT = true;
         }
+        
     });

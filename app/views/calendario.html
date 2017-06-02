@@ -1,13 +1,49 @@
 <section class="container-fluid marginRow">
     <div class="row">
-        <h1 class="title">Personal</h1>
+        <h1 class="title">Calendario</h1>
     </div>
     <div class="row">
-        <div mobiscroll-data="events" mobiscroll-eventcalendar="settings" mobiscroll-instance="demo"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <form name="formCalendario" class="">
+                <h4 class="title">Agregar día</h4>
+                <div class="form-group">
+                    <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre">
+                    <p class="textValid1 text-center" ng-show="formCalendario.nombre.$error.required">Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-inputs" id="descripcion" name="descripcion" required ng-model="datos.descripcion" placeholder="Descripción"
+                        cols="10" rows="5" style="height:50px;"></textarea>
+                    <p class="textValid1 text-center" ng-show="formCalendario.descripcion.$error.required">Campo obligatorio</p>
+                </div>
 
-        <label for="">Calendario entrada</label>
+                <div class="form-group">
+                    <input type="date" class="form-inputs" id="fecha" name="fecha" mobiscroll-calendar="settingsInput" required ng-model="datos.fecha"
+                        placeholder="Fecha">
+                    <p class="textValid1 text-center" ng-show="formIdentificacion.fecha.$error.required">Campo obligatorio</p>
+                </div>
+                <div class="text-center">
+                    <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formCalendario.$invalid" class="btn btns hvr-float-shadow center-block">Agregar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div mobiscroll-data="events" mobiscroll-eventcalendar="settings" mobiscroll-instance="demo" class="mtb10 bAzul"></div>
+        </div>
+            <select ng-model="myselect" mobiscroll-select="settingsSelect">
+        <option value="1">Atlanta</option>
+        <option value="2">Berlin</option>
+        <option value="3">Boston</option>
+        <option value="4">Chicago</option>
+        <option value="5">London</option>
+        <option value="6">Los Angeles</option>
+        <option value="7">New York</option>
+        <option value="8">Paris</option>
+        <option value="9">San Francisco</option>
+    </select>
+
+        <!-- <label for="">Calendario entrada</label>
         <input ng-model="entrada" mobiscroll-calendar="settingsInput" />
         <label for="">Calendario salida</label>
-        <input ng-model="salida" mobiscroll-calendar="settingsInput" />
+        <input ng-model="salida" mobiscroll-calendar="settingsInput" />-->
     </div>
 </section>
