@@ -27,4 +27,16 @@ angular.module('sicamsaApp')
             $scope.tabD = false;
             $scope.tabT = true;
         }
+          $scope.settingsInput = {
+            theme: 'mobiscroll',
+            display: 'bubble',
+            lang: 'es',
+        };
+        $scope.settingsSelect = {
+            theme: 'mobiscroll',
+            display: 'bubble',
+            minWidth: 200,
+            lang: 'es'
+        };
+        
     });

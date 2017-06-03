@@ -42,4 +42,31 @@ angular.module('sicamsaApp')
             $scope.tabCu = true;
             $scope.tabCi = false;
         }
+        $scope.events = [{
+            d: new Date(),
+            text: 'ejemplo',
+            color: '#007ac8'
+        }];
+        $scope.settings = {
+            theme: 'mobiscroll',
+            display: 'inline',
+            layout: 'liquid',
+            calendarScroll: 'horizontal',
+            showOuterDays: true,
+            showEventCount: true,
+            lang: 'es',
+            eventText: "Descanzo",
+            eventsText: "feriados"
+        };
+        $scope.settingsInput = {
+            theme: 'mobiscroll',
+            display: 'bubble',
+            lang: 'es',
+        };
+        $scope.settingsSelect = {
+            theme: 'mobiscroll',
+            display: 'bubble',
+            minWidth: 200,
+            lang: 'es'
+        };
     });

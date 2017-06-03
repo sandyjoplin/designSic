@@ -2,6 +2,7 @@
 
 body {
     background: #e9f5fd;
+    font-family: 'AvenirLight';
 }
 
 svg {
@@ -143,16 +144,32 @@ svg {
 .p0 {
     padding: 0 !important;
 }
+.ptb5{
+    padding: 5px 0;
+    }
 .ptb10{
-    padding: 10px 0;}
+    padding: 10px 0;
+    }
 .p10 {
     padding: 10px;
 }
-.mtb10{
+.pL15{
+    padding-left: 15px;
+}
+.mtb20{
 margin: 20px 0;
 }
 .width100 {
     width: 100%;
+}
+.m10{
+    margin: 10px;
+}
+.m15{
+    margin: 15px;
+}
+.mL15{
+    margin-left: 15px;
 }
 /*BORDER*/
 .bAzul{
@@ -225,16 +242,23 @@ p {
 
 .textNew {
     color: #1a3e5b !important;
+     font-family: 'AvenirLight';
 }
 
 .textNew1 {
     color: #1a3e5b !important;
+     font-family: 'AvenirLight';
 }
 
 .textEdit {
     color: #0094f1 !important;
 }
+.textElemento{
+    color: #0094f1 !important;
+    font-family: 'AvenirLight';
+    font-size: 20px;
 
+}
 .textDelete {
     color: #db5050 !important;
 }
@@ -244,13 +268,21 @@ p {
 }
 
 .colorIcon {
-    color: #72c6f2;
+    color: #20c7f4;
 }
 
 .imgIcon {
     width: 20px;
 }
-
+.AsistenciaIcon{
+ color: #36b408;
+}
+.faltaIcon{
+color: #db5050;
+}
+.retardoIcon{
+ color: #f2ce09;
+}
 
 /**iIMAGES**/
 
@@ -396,7 +428,7 @@ p {
     font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
-    background-color: #0094f1;
+    background-color: #0094f1 !important;
     background-image: none;
     border: 1px solid #0095d2;
     border-radius: 0px !important;
@@ -419,7 +451,19 @@ p {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
- 
+ input,select {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #adc8db;
+    line-height: inherit;
+    width: 100%;
+    height: 34px;
+}
+input ,select::-webkit-input-placeholder{
+  color: #53a0d6;
+  padding-left: 10px;
+}
+
 .form-inputs:focus {
     border-color: #007ac8;
     color: #007ac8;
@@ -621,6 +665,7 @@ input[type="date"].full:before {
 .btnEmpresa{
     background: transparent;
     border: none;
+    outline: 0;
 }
 /*SIDEBAR DOS*/
 
@@ -732,6 +777,9 @@ input[type="date"].full:before {
 .backWhite1 {
     background: #fff;
     border: 1px solid #adc8db;
+}
+.backWhite2{
+    background: #fff;
 }
 
 .backEmpresa {

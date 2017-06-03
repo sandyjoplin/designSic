@@ -19,31 +19,15 @@
                 <div class="form-group">
                     <input type="date" class="form-inputs" id="fecha" name="fecha" mobiscroll-calendar="settingsInput" required ng-model="datos.fecha"
                         placeholder="Fecha">
-                    <p class="textValid1 text-center" ng-show="formIdentificacion.fecha.$error.required">Campo obligatorio</p>
+                    <p class="textValid1 text-center" ng-show="formCalendario.fecha.$error.required">Campo obligatorio</p>
                 </div>
                 <div class="text-center">
-                    <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formCalendario.$invalid" class="btn btns hvr-float-shadow center-block">Agregar</button>
+                    <button type="submit" ng-click="calendario.empresa(datos)" ng-disabled="formCalendario.$invalid" class="btn btns hvr-float-shadow center-block">Agregar</button>
                 </div>
             </form>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-<div mobiscroll-data="events" mobiscroll-eventcalendar="settings" mobiscroll-instance="demo" class="mtb10 bAzul"></div>
+            <div mobiscroll-data="events" mobiscroll-eventcalendar="settings" mobiscroll-instance="demo" class="mtb20 bAzul"></div>
         </div>
-            <select ng-model="myselect" mobiscroll-select="settingsSelect">
-        <option value="1">Atlanta</option>
-        <option value="2">Berlin</option>
-        <option value="3">Boston</option>
-        <option value="4">Chicago</option>
-        <option value="5">London</option>
-        <option value="6">Los Angeles</option>
-        <option value="7">New York</option>
-        <option value="8">Paris</option>
-        <option value="9">San Francisco</option>
-    </select>
-
-        <!-- <label for="">Calendario entrada</label>
-        <input ng-model="entrada" mobiscroll-calendar="settingsInput" />
-        <label for="">Calendario salida</label>
-        <input ng-model="salida" mobiscroll-calendar="settingsInput" />-->
     </div>
 </section>

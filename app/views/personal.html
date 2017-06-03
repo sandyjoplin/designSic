@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <select class="form-control1 center-block">
+            <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">
                 <option>Filtrar por:</option>
                 <option>Recursos Humanos</option>
                 <option>Ventas</option>
@@ -461,8 +461,7 @@
             </table>
         </div>
     </div>
-</section>
-<!-- Modal Nuevo Empleado -->
+</section><!-- Modal Nuevo Empleado -->
 <div class="modal fade" id="nuevoEmpleado" tabindex="-1" role="dialog" aria-labelledby="">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -564,7 +563,7 @@
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.licencia.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="nacionalidad" id="nacionalidad" required ng-model="datos.nacionalidad">
+                                                <select class="form-inputs center-block" name="nacionalidad" id="nacionalidad" required ng-model="datos.nacionalidad" mobiscroll-select="settingsSelect">
                                                     <option value="">Nacionalidad</option>
                                                     <option value="opciones">México</option>
                                                     <option value="opciones">E.U.A</option>
@@ -580,7 +579,8 @@
                                         </div>
                                         <div class="col-lg-6 col-mf-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
+                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoUno"
+                                                    required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
@@ -588,18 +588,20 @@
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.rfc.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
+                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoDos"
+                                                    required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.vigencia.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="nacimiento" id="nacimiento" required ng-model="datos.nacimiento">
+                                                <select class="form-inputs center-block" name="lugarNacimiento" id="lugarNacimiento" required ng-model="datos.lugarNacimiento"
+                                                    mobiscroll-select="settingsSelect">
                                                     <option value="">Lugar de nacimiento</option>
                                                     <option value="opciones">CDMX</option>
                                                     <option value="opciones">Puebla</option>
                                                     <option value="opciones">Tabasco</option>
                                                     <option value="opciones">Guadalajara</option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.lugarNacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="tratamiento" name="tratamiento" required ng-model="datos.tratamiento" placeholder="Tratamiento">
@@ -626,21 +628,22 @@
                                                 <p class="textValid1 text-center" ng-show="formContacto.calle.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad">
+                                                <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad" mobiscroll-select="settingsSelect"
+                                                    s>
                                                     <option value="">Ciudad</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
                                                 <p class="textValid1 text-center" ng-show="formContacto.ciudad.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado">
+                                                <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado" mobiscroll-select="settingsSelect">
                                                     <option value="">Estado</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
                                                 <p class="textValid1 text-center" ng-show="formContacto.estado.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais">
+                                                <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais" mobiscroll-select="settingsSelect">
                                                     <option value="">País</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -671,7 +674,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia">
+                                                <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia" mobiscroll-select="settingsSelect">
                                                     <option value="">Colonia</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -682,7 +685,7 @@
                                                 <p class="textValid1 text-center" ng-show="formContacto.cp.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento">
+                                                <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento" mobiscroll-select="settingsSelect">
                                                     <option name="" value="">Tipo de asentamiento</option>
                                                     <option value="opcion"></option>
                                                 </select>
@@ -708,7 +711,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento">
+                                                <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento" mobiscroll-select="settingsSelect">
                                                     <option value="">Departamento</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -719,8 +722,9 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Contratación ">
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <input type="date" class="form-inputs" id="contratacion" name="contratacion" mobiscroll-calendar="settingsInput" required
+                                                    ng-model="datos.contratacion" placeholder="Fecha de Contratación ">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.contratacion.$error.required">Campo obligatorio</p>
                                             </div>
 
                                             <div class="form-group">
@@ -743,7 +747,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto">
+                                                <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto" mobiscroll-select="settingsSelect">
                                                     <option value="">Puesto</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -788,7 +792,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                                                        <div class=""> <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span> <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span> </div>
+                                                        <div class=""> <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>                                                            <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>                                                            </div>
                                                     </div>
                                                 </div>
                                                 <p class="textValid1 text-center" ng-show="formLaborales.privilegios.$error.required">Campo obligatorio</p>
@@ -803,7 +807,7 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.extension.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco">
+                                                <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco" mobiscroll-select="settingsSelect">
                                                     <option value="">Institución bancaria</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -826,8 +830,7 @@
             </div>
             </section>
             <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>          <button type="button" class="btn btn-primary">Guardar</button>
             </div>-->
         </div>
     </div>

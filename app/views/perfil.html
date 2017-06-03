@@ -195,14 +195,14 @@
             </div>
             <div ng-show="tabT">
                 <div class="row backWhite1 ptb10">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="row ptb10">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                 <img src="images/icons/14.png" class="imgIcon alignV" alt="">
                                 <span class="titleTab1 alignV">DEPARTAMENTO:</span>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                                <button type="button" class="btn btnRecursos">Recursos Humanos</button>
+                                <span class="textTab1 alignV">Recursos Humanos</span>
                             </div>
                         </div>
                         <div class="row ptb10">
@@ -214,7 +214,6 @@
                                 <span class="textTab1 alignV"> Gerente general</span>
                             </div>
                         </div>
-
                         <div class="row ptb10">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                 <img src="images/icons/8.png" class="imgIcon alignV" alt="">
@@ -243,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
                         <div class="row ptb10">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                 <img src="images/icons/17.png" class="imgIcon alignV" alt="">
@@ -287,6 +286,92 @@
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                                 <span class="textTab1 alignV"> bancomer</span>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row container-fluid">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtb20">
+                            <h2 class="title">Asistencia</h2>
+                        </div>
+                    </div>
+                    <div class="row container-fluid">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <img src="images/icons/8.png" class="imgIcon alignV" alt="">
+                                    <span class="titleTab1 alignV">DIAS LABORALES</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV"> lunes - Viernes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <img src="images/icons/22.png" class="imgIcon alignV" alt="">
+                                    <span class="titleTab1 alignV">HORARIO</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV"> 8am - 8pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row container-fluid">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtb20">
+                            <h2 class="title">Ver por días</h2>
+                        </div>
+                    </div>
+                    <div class="row container-fluid">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input class="form-inputs" id="fechaUno" name="fechaUno" mobiscroll-calendar="settingsInput" required ng-model="fechaUno"
+                                        placeholder="Elegir fecha inicial">
+                                    <p class="textValid1 text-center" ng-show="fechaUno.$error.required">Campo obligatorio</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input class="form-inputs" id="fechaDos" name="fechaDos" mobiscroll-calendar="settingsInput" required ng-model="fechaDos"
+                                        placeholder="Elegir fecha final">
+                                    <p class="textValid1 text-center" ng-show="fechaDos.$error.required">Campo obligatorio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
+                            <div class="row ptb5">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <i class="fa fa-calendar-check-o AsistenciaIcon fa-lg" aria-hidden="true"></i>
+                                    <span class="titleTab1 alignV">ASISTENCIAS</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV">12</span>
+                                </div>
+                            </div>
+                            <div class="row ptb5">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <i class="fa fa-calendar-times-o faltaIcon fa-lg" aria-hidden="true"></i>
+                                    <span class="titleTab1 alignV">FALTAS</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV">12</span>
+                                </div>
+                            </div>
+                            <div class="row ptb5">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <i class="fa fa-calendar-minus-o retardoIcon fa-lg" aria-hidden="true"></i>
+                                    <span class="titleTab1 alignV">RETARDOS</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV">12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row container-fluid">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtb20">
+                                <div mobiscroll-data="events" mobiscroll-eventcalendar="settings" mobiscroll-instance="demo"></div>
                             </div>
                         </div>
                     </div>
@@ -473,7 +558,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="title">NUEVO EMPLEADO</h1>
+                <h1 class="title">EDITAR EMPLEADO</h1>
             </div>
             <div class="modal-body">
                 <section class="container-fluid marginRow backWhite1">
@@ -568,7 +653,7 @@
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.licencia.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="nacionalidad" id="nacionalidad" required ng-model="datos.nacionalidad">
+                                                <select class="form-inputs center-block" name="nacionalidad" id="nacionalidad" required ng-model="datos.nacionalidad" mobiscroll-select="settingsSelect">
                                                     <option value="">Nacionalidad</option>
                                                     <option value="opciones">México</option>
                                                     <option value="opciones">E.U.A</option>
@@ -584,7 +669,8 @@
                                         </div>
                                         <div class="col-lg-6 col-mf-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
+                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento"
+                                                    mobiscroll-calendar="settingsInput">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
@@ -592,18 +678,20 @@
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.rfc.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
+                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia de Licencia"
+                                                    mobiscroll-calendar="settingsInput">
                                                 <p class="textValid1 text-center" ng-show="formIdentificacion.vigencia.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="nacimiento" id="nacimiento" required ng-model="datos.nacimiento">
+                                                <select class="form-inputs center-block" name="lugarNacimiento" id="lugarNacimiento" required ng-model="datos.lugarNacimiento"
+                                                    mobiscroll-select="settingsSelect">
                                                     <option value="">Lugar de nacimiento</option>
                                                     <option value="opciones">CDMX</option>
                                                     <option value="opciones">Puebla</option>
                                                     <option value="opciones">Tabasco</option>
                                                     <option value="opciones">Guadalajara</option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.lugarNacimiento.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="tratamiento" name="tratamiento" required ng-model="datos.tratamiento" placeholder="Tratamiento">
@@ -630,21 +718,21 @@
                                                 <p class="textValid1 text-center" ng-show="formContacto.calle.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad">
+                                                <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad" mobiscroll-select="settingsSelect">
                                                     <option value="">Ciudad</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
                                                 <p class="textValid1 text-center" ng-show="formContacto.ciudad.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado">
+                                                <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado" mobiscroll-select="settingsSelect">
                                                     <option value="">Estado</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
                                                 <p class="textValid1 text-center" ng-show="formContacto.estado.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais">
+                                                <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais" mobiscroll-select="settingsSelect">
                                                     <option value="">País</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -675,7 +763,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia">
+                                                <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia" mobiscroll-select="settingsSelect">
                                                     <option value="">Colonia</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -686,7 +774,7 @@
                                                 <p class="textValid1 text-center" ng-show="formContacto.cp.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento">
+                                                <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento" mobiscroll-select="settingsSelect">
                                                     <option name="" value="">Tipo de asentamiento</option>
                                                     <option value="opcion"></option>
                                                 </select>
@@ -712,7 +800,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento">
+                                                <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento" mobiscroll-select="settingsSelect">
                                                     <option value="">Departamento</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -723,8 +811,9 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" required ng-model="datos.nacimiento" placeholder="Fecha de Contratación ">
-                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                                <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
+                                                    mobiscroll-calendar="settingsInput">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.contratacion.$error.required">Campo obligatorio</p>
                                             </div>
 
                                             <div class="form-group">
@@ -747,7 +836,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto">
+                                                <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto" mobiscroll-select="settingsSelect">
                                                     <option value="">Puesto</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
@@ -792,22 +881,63 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                                                        <div class=""> <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span> <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span> </div>
+                                                        <div class="">
+                                                            <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>
+                                                            <span
+                                                                class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <p class="textValid1 text-center" ng-show="formLaborales.privilegios.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group ">
+                                                <div class=" form-inputs">
+                                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p0">
+                                                        <div class="dropdown">
+                                                            <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Días laborales</a>
+                                                            <ul class="dropdown-menu p10">
+                                                                <li>
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                        <label for="" class="textNew">Lunes-Viernes
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                        <label for="" class="textNew">Lunes-Sabado
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                        <label for="" class="textNew">Lunes-Domingo
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                        <div class="">
+                                                            <span class="textNew1"> Lunes-Viernes</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="textValid1 text-center" ng-show="formLaborales.diasLaborales.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
                                             </div>
-
                                             <div class="form-group">
                                                 <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.extension.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco">
+                                                <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco" mobiscroll-select="settingsSelect">
                                                     <option value="">Institución bancaria</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
