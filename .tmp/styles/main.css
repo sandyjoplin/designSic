@@ -544,6 +544,9 @@ input[type="date"].full:before {
 
 
 /**NAVBAR**/
+.navbar{
+    margin-bottom: 0;
+}
 
 .navBar {
     width: 100%;

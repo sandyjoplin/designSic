@@ -302,7 +302,7 @@
                                     <span class="titleTab1 alignV">DIAS LABORALES</span>
                                 </div>
                                 <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                                    <span class="textTab1 alignV"> lunes - Viernes</span>
+                                    <span class="textTab1 alignV"> Lunes - Viernes</span>
                                 </div>
                             </div>
                         </div>
@@ -809,6 +809,10 @@
                                             <div class="form-group">
                                                 <input type="number" class="form-inputs" id="numEmpleado" name="numEmpleado" required ng-model="datos.numEmpleado" placeholder="Número de empleado">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
+                                            </div>
+                                               <div class="form-group">
+                                                <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
