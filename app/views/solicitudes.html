@@ -1,0 +1,688 @@
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Solicitudes permisos o vacaciones</h1>
+    </div>
+    <div class="row backBlue1">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                    <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">
+                <option>Filtrar por:</option>
+                <option>Recursos Humanos</option>
+                <option>Ventas</option>
+                <option>Manteniemiento</option>
+                <option></option>
+            </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoPermisos">Enviar Solicitud</button>
+        </div>
+    </div>
+    <div class="row backWhite1">
+        <div class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="titleTable">
+                        <th></th>
+                        <th>ID</th>
+                        <th>FOTO</th>
+                        <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+                        <th>APELLIDO PATERNO</th>
+                        <th>APELLIDO MATERNO</th>
+                        <th>DEPARTAMENTO</th>
+                        <th>APROBAR</th>
+                        <th>RECHAZAR</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnRecursos">Recursos Humanos</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox" checked>
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnVentas">Ventas</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnFacturacion">Facturación</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnOperaciones">Operaciones</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnTrafico">Trafico</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnMensajeria">Mensajeria</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="lignV"><button type="button" class="btn btnContabilidad">Contabilidad</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnCalidad">Calidad</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnMantenimiento">Mantenimiento</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#verSolicitud" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnAlmacen">Almacén</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#formatoPermisos" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">#78622</td>
+                        <td class="mailTable alignV"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable"> sandra</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV nameTable"> Juarez</td>
+                        <td class="alignV"><button type="button" class="btn btnVigilancia">Vigilancia</button></td>
+                        <td class="alignV"><button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                        <td class="alignV"><button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a data-toggle="modal" data-target="#formatoPermisos" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Modal ver solicitud -->
+
+<div class="modal fade" id="verSolicitud" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img src="images/logo.png" class="center-block" width="150px" alt="">
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center textEdit">SOLICITUD DE PERMISO O VACACIONES</h4>
+            </div>
+            <div class="modal-body">
+                  <br>
+                    <img src="images/profile.png" class="imgProfile2 center-block" alt="">
+                    <h3 class="text-center textNew"><i class="fa fa-circle activo" aria-hidden="true"></i> Srta.Sandra Ivette Juarez Lopez</h3>
+                    <button type="button" class="btn btnRecursos center-block">Recursos Humanos</button>
+                    <br>
+                <div class="col">
+                  
+               
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/8.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV"> FECHA DE SOLICITUD:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> 16/12/17</span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/23.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV"> ASUNTO:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> Vacaciones</span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/27.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV">CANTIDAD DE DÍAS SOLICITADOS:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> 2</span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/8.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV">DÍAS SOLICITADOS:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> 04/10/12 A 12/03/17 </span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/8.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV">FECHA DE INGRESO</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> 16/10/17 </span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/24.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV"> SG:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"></span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/25.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV"> CG:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> Lorem ipsum dolor sit ame</span>
+                    </div>
+                </div>
+                <div class="row ptb10">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <img src="images/icons/27.png" class="imgIcon alignV" alt="">
+                        <span class="titleTab1 alignV">OBSERVACIONES:</span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <span class="textTab1 alignV"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem veniam assumenda numquam similique earum, a facilis ullam ex itaque blanditiis aliquam, laudantium dolorum, omnis facere pariatur odit accusamus quidem impedit.</span>
+                    </div>
+                </div>
+                 </div>
+                <form name="formPermisos" class="">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="rh" name="rh" required ng-model="datos.rh" placeholder="VoBo Recursos humanos">
+                                <p class="textValid1 text-center" ng-show="formPermisos.rh.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="jefe" name="jefe" required ng-model="datos.jefe" placeholder="Autorización Jefe Inmediato">
+                                <p class="textValid1 text-center" ng-show="formPermisos.jefe.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="gerencia" name="gerencia" required ng-model="datos.gerencia" placeholder="VoBo Gerencia Operativa">
+                                <p class="textValid1 text-center" ng-show="formPermisos.gerencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<!-- Modal Formato-->
+
+<div class="modal fade" id="formatoPermisos" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img src="images/logo.png" class="center-block" width="150px" alt="">
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center textEdit">SOLICITUD DE PERMISO O VACACIONES</h4>
+            </div>
+            <div class="modal-body">
+                <form name="formPermisos" class="">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="nombreSolicitante" name="nombreSolicitante" required ng-model="datos.nombreSolicitante"
+                                    placeholder="Nombre del solicitante">
+                                <p class="textValid1 text-center" ng-show="formPermisos.nombreSolicitante.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaSolicitud" name="fechaSolicitud" required ng-model="datos.fechaSolicitud" placeholder="Fecha de solicitud"
+                                    mobiscroll-calendar="settingsInput">
+                                <p class="textValid1 text-center" ng-show="formPermisos.fechaSolicitud.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">SG</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">CG</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="textValid1 text-center" ng-show="formPermisos.razon.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaIngreso" name="fechaIngreso" required ng-model="datos.fechaIngreso" placeholder="Fecha de Ingreso"
+                                    mobiscroll-calendar="settingsInput">
+                                <p class="textValid1 text-center" ng-show="formPermisos.fechaIngreso.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Vacaciones</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Permiso</label>
+                                           </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Otro</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="textValid1 text-center" ng-show="formPermisos.razon.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="especifique" name="especifique" required ng-model="datos.especifique" placeholder="Especifique">
+                                <p class="textValid1 text-center" ng-show="formPermisos.especifique.$error.required">Campo obligatorio</p>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-inputs" id="diasSolicitados" name="diasSolicitados" required ng-model="datos.diasSolicitados"
+                                    placeholder="Cantidad de dias solicitados">
+                                <p class="textValid1 text-center" ng-show="formPermisos.diasSolicitados.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-center textForm">Días solicitados</p><br>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaUno" name="diaUno" required ng-model="datos.diaUno" placeholder="Día" mobiscroll-calendar="settingsInput">
+                                <p class="textValid1 text-center" ng-show="formPermisos.diaUno.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaDos" name="diaDos" required ng-model="datos.diaDos" placeholder="A Día" mobiscroll-calendar="settingsInput">
+                                <p class="textValid1 text-center" ng-show="formPermisos.diaDos.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="observaciones" name="observaciones" required ng-model="datos.observaciones"
+                                    placeholder="Observaciones" cols="30" rows="5" style="height:100px;"></textarea>
+                                <p class="textValid1 text-center" ng-show="formPermisos.observaciones.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="rh" name="rh" required ng-model="datos.rh" placeholder="VoBo Recursos humanos">
+                                <p class="textValid1 text-center" ng-show="formPermisos.rh.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="jefe" name="jefe" required ng-model="datos.jefe" placeholder="Autorización Jefe Inmediato">
+                                <p class="textValid1 text-center" ng-show="formPermisos.jefe.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="gerencia" name="gerencia" required ng-model="datos.gerencia" placeholder="VoBo Gerencia Operativa">
+                                <p class="textValid1 text-center" ng-show="formPermisos.gerencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->

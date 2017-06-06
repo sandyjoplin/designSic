@@ -204,7 +204,7 @@ p {
     margin: 0;
 }
 .textValid1 {
-    color: #db5050;
+    color: #d9534f;
     font-size: 12px;
     font-family: 'AvenirLight';
     margin: 0;
@@ -272,7 +272,7 @@ p {
 
 }
 .textDelete {
-    color: #db5050 !important;
+    color: #d9534f !important;
 }
 
 .textForm {
@@ -287,13 +287,13 @@ p {
     width: 20px;
 }
 .AsistenciaIcon{
- color: #36b408;
+ color: #5cb85c;
 }
 .faltaIcon{
-color: #db5050;
+color: #d9534f;
 }
 .retardoIcon{
- color: #f2ce09;
+ color: #f0ad4e;
 }
 
 /**iIMAGES**/
@@ -366,6 +366,7 @@ color: #db5050;
     color: #fff;
     border: 1px solid #0095d2;
     outline: 0 !important;
+    font-size: 14px;
 }
 
 .btns:hover,
@@ -873,9 +874,10 @@ input[type="date"].full:before {
 }
 
 .titleTable {
-    color: #8a8c8d;
+    color: #93a1af;
     font-size: 14px;
     font-family: 'AvenirLight';
+    background: #1a3e5b;
 }
 
 .nameTable {
@@ -1185,6 +1187,7 @@ input[type="date"].full:before {
 .titleTab1 {
     color: #5d6052;
     font-family: 'AvenirMedium';
+    text-align: justify;
 }
 
 .textTab1 {
@@ -1486,15 +1489,15 @@ input[type="date"].full:before {
 /*SECCION PERFIL*/
 
 .activo {
-   color: #36b408;
+   color: #5cb85c;
 }
 
 .ausente {
-    color: #f2ce09;
+    color: #f0ad4e;
 }
 
 .inactivo {
-    color: #db5050;
+    color: #d9534f;
 }
 
 #miGrid .miGrid-item {
