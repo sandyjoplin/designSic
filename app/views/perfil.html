@@ -241,6 +241,24 @@
                                 <span class="textTab1 alignV"> 13 diciembre 1991</span>
                             </div>
                         </div>
+                        <div class="row ptb10">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <img src="images/icons/28.png" class="imgIcon alignV" alt="">
+                                <span class="titleTab1 alignV">TALLA DE CAMISETA:</span>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <span class="textTab1 alignV"> M</span>
+                            </div>
+                        </div>
+                        <div class="row ptb10">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <img src="images/icons/29.png" class="imgIcon alignV" alt="">
+                                <span class="titleTab1 alignV">TALLA DE PANTALÓN:</span>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <span class="textTab1 alignV"> 13</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
                         <div class="row ptb10">
@@ -288,7 +306,17 @@
                                 <span class="textTab1 alignV"> bancomer</span>
                             </div>
                         </div>
-                    </div><br>
+                        <div class="row ptb10">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <img src="images/icons/30.png" class="imgIcon alignV" alt="">
+                                <span class="titleTab1 alignV">TALLA DE ZAPATOS:</span>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <span class="textTab1 alignV"> 24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <div class="row container-fluid">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtb20">
                             <h2 class="title">Asistencia</h2>
@@ -296,7 +324,7 @@
                     </div>
                     <div class="row container-fluid">
                         <div class="col-lg-6">
-                            <div class="row">
+                            <div class="row ptb10">
                                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                     <img src="images/icons/8.png" class="imgIcon alignV" alt="">
                                     <span class="titleTab1 alignV">DIAS LABORALES</span>
@@ -305,9 +333,18 @@
                                     <span class="textTab1 alignV"> Lunes - Viernes</span>
                                 </div>
                             </div>
+                               <div class="row ptb10">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                    <img src="images/icons/31.png" class="imgIcon alignV" alt="">
+                                    <span class="titleTab1 alignV">HORARIO DE COMIDA</span>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                    <span class="textTab1 alignV"> 3pm - 4pm</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="row">
+                            <div class="row ptb10">
                                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                     <img src="images/icons/22.png" class="imgIcon alignV" alt="">
                                     <span class="titleTab1 alignV">HORARIO</span>
@@ -810,16 +847,15 @@
                                                 <input type="number" class="form-inputs" id="numEmpleado" name="numEmpleado" required ng-model="datos.numEmpleado" placeholder="Número de empleado">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
                                             </div>
-                                               <div class="form-group">
-                                                <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
-                                            </div>
                                             <div class="form-group">
                                                 <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
                                                     mobiscroll-calendar="settingsInput">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.contratacion.$error.required">Campo obligatorio</p>
                                             </div>
-
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario laboral">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
+                                            </div>
                                             <div class="form-group">
                                                 <input type="number" class="form-inputs" id="telefono" name="telefono" required ng-model="datos.telefono" placeholder="Teléfono">
                                                 <p class="textValid1 text-center" ng-show="formLaborales.telefono.$error.required">Campo obligatorio</p>
@@ -830,8 +866,8 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.tarjeta.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-inputs" id="camiseta" name="camiseta" required ng-model="datos.camiseta" placeholder="Talla de camiseta">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.camiseta.$error.required">Campo obligatorio</p>
+                                                <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="pantalon" name="pantalon" required ng-model="datos.pantalon" placeholder="Talla de pantalón">
@@ -887,8 +923,7 @@
                                                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                                         <div class="">
                                                             <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>
-                                                            <span
-                                                                class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
+                                                            <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -933,8 +968,8 @@
                                                 <p class="textValid1 text-center" ng-show="formLaborales.diasLaborales.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
+                                                <input type="text" class="form-inputs" id="horarioComida" name="horarioComida" required ng-model="datos.horarioComida" placeholder="Horario de comida">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.horarioComida.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
@@ -946,6 +981,10 @@
                                                     <option name="" value="opcion"></option>
                                                 </select>
                                                 <p class="textValid1 text-center" ng-show="formLaborales.banco.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="camiseta" name="camiseta" required ng-model="datos.camiseta" placeholder="Talla de camiseta">
+                                                <p class="textValid1 text-center" ng-show="formLaborales.camiseta.$error.required">Campo obligatorio</p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-inputs" id="zapatos" name="zapatos" required ng-model="datos.zapatos" placeholder="Talla de zapatos">

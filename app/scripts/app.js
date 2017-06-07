@@ -78,6 +78,11 @@ angular
               controller: 'CalendarioCtrl',
               controllerAs: 'calendario'
             })
+            .when('/nomina', {
+              templateUrl: 'views/nomina.html',
+              controller: 'NominaCtrl',
+              controllerAs: 'nomina'
+            })
             .otherwise({
                 redirectTo: '/'
             });

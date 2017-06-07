@@ -461,7 +461,8 @@
             </table>
         </div>
     </div>
-</section><!-- Modal Nuevo Empleado -->
+</section>
+<!-- Modal Nuevo Empleado -->
 <div class="modal fade" id="nuevoEmpleado" tabindex="-1" role="dialog" aria-labelledby="">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -707,168 +708,170 @@
                         <div ng-show="tabT">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <br>
-                               <form name="formLaborales" class="">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento" mobiscroll-select="settingsSelect">
+                            <form name="formLaborales" class="">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento" mobiscroll-select="settingsSelect">
                                                     <option value="">Departamento</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formLaborales.departamento.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="number" class="form-inputs" id="numEmpleado" name="numEmpleado" required ng-model="datos.numEmpleado" placeholder="Número de empleado">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
-                                            </div>
-                                               <div class="form-group">
-                                                <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
-                                                    mobiscroll-calendar="settingsInput">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.contratacion.$error.required">Campo obligatorio</p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="number" class="form-inputs" id="telefono" name="telefono" required ng-model="datos.telefono" placeholder="Teléfono">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.telefono.$error.required">Campo obligatorio</p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="number" class="form-inputs" id="tarjeta" name="tarjeta" required ng-model="datos.tarjeta" placeholder="Número de tarjeta">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.tarjeta.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="camiseta" name="camiseta" required ng-model="datos.camiseta" placeholder="Talla de camiseta">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.camiseta.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="pantalon" name="pantalon" required ng-model="datos.pantalon" placeholder="Talla de pantalón">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.pantalon.$error.required">Campo obligatorio</p>
-                                            </div>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.departamento.$error.required">Campo obligatorio</p>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto" mobiscroll-select="settingsSelect">
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="numEmpleado" name="numEmpleado" required ng-model="datos.numEmpleado" placeholder="Número de empleado">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
+                                                mobiscroll-calendar="settingsInput">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.contratacion.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario laboral">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="telefono" name="telefono" required ng-model="datos.telefono" placeholder="Teléfono">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.telefono.$error.required">Campo obligatorio</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="tarjeta" name="tarjeta" required ng-model="datos.tarjeta" placeholder="Número de tarjeta">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.tarjeta.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="pantalon" name="pantalon" required ng-model="datos.pantalon" placeholder="Talla de pantalón">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.pantalon.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto" mobiscroll-select="settingsSelect">
                                                     <option value="">Puesto</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formLaborales.puesto.$error.required">Campo obligatorio</p>
-                                            </div>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.puesto.$error.required">Campo obligatorio</p>
+                                        </div>
 
-                                            <div class="form-group ">
-                                                <div class=" form-inputs">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p0">
-                                                        <div class="dropdown">
-                                                            <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Privilegios</a>
-                                                            <ul class="dropdown-menu p10">
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
-                                                                        <label for="" class="textConsultar">Consultar
+                                        <div class="form-group ">
+                                            <div class=" form-inputs">
+                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p0">
+                                                    <div class="dropdown">
+                                                        <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Privilegios</a>
+                                                        <ul class="dropdown-menu p10">
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textConsultar">Consultar
                                                                         </label>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
-                                                                        <label for="" class="textNew">Nuevo
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textNew">Nuevo
                                                                         </label>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
-                                                                        <label for="" class="textEdit">Editar
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textEdit">Editar
                                                                         </label>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
-                                                                        <label for="" class="textDelete">Eliminar
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textDelete">Eliminar
                                                                         </label>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                                                        <div class="">
-                                                            <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>
-                                                            <span
-                                                                class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
-                                                        </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
-                                                <p class="textValid1 text-center" ng-show="formLaborales.privilegios.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group ">
-                                                <div class=" form-inputs">
-                                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p0">
-                                                        <div class="dropdown">
-                                                            <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Días laborales</a>
-                                                            <ul class="dropdown-menu p10">
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
-                                                                        <label for="" class="textNew">Lunes-Viernes
-                                                                        </label>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
-                                                                        <label for="" class="textNew">Lunes-Sabado
-                                                                        </label>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox checkbox-primary">
-                                                                        <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
-                                                                        <label for="" class="textNew">Lunes-Domingo
-                                                                        </label>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                                                        <div class="">
-                                                            <span class="textNew1"> Lunes - Viernes</span>
-                                                        </div>
+                                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                    <div class="">
+                                                        <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>
+                                                        <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
                                                     </div>
                                                 </div>
-                                                <p class="textValid1 text-center" ng-show="formLaborales.diasLaborales.$error.required">Campo obligatorio</p>
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.privilegios.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class=" form-inputs">
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p0">
+                                                    <div class="dropdown">
+                                                        <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Días laborales</a>
+                                                        <ul class="dropdown-menu p10">
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Viernes
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Sabado
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Domingo
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                    <div class="">
+                                                        <span class="textNew1"> Lunes-Viernes</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group">
-                                                <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.extension.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco" mobiscroll-select="settingsSelect">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.diasLaborales.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="horarioComida" name="horarioComida" required ng-model="datos.horarioComida" placeholder="Horario de comida">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.horarioComida.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.extension.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco" mobiscroll-select="settingsSelect">
                                                     <option value="">Institución bancaria</option>
                                                     <option name="" value="opcion"></option>
                                                 </select>
-                                                <p class="textValid1 text-center" ng-show="formLaborales.banco.$error.required">Campo obligatorio</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="zapatos" name="zapatos" required ng-model="datos.zapatos" placeholder="Talla de zapatos">
-                                                <p class="textValid1 text-center" ng-show="formLaborales.zapatos.$error.required">Campo obligatorio</p>
-                                            </div>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.banco.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="camiseta" name="camiseta" required ng-model="datos.camiseta" placeholder="Talla de camiseta">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.camiseta.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="zapatos" name="zapatos" required ng-model="datos.zapatos" placeholder="Talla de zapatos">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.zapatos.$error.required">Campo obligatorio</p>
                                         </div>
                                     </div>
-                                    <div class="text-center">
-                                        <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
-                                    </div>
-                                    <br>
-                                </form>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                                </div>
+                                <br>
+                            </form>
                             </div>
                         </div>
                     </div>
