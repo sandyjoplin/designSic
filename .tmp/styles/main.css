@@ -156,7 +156,12 @@ svg {
 .p10 {
     padding: 10px;
 }
-
+.p20 {
+    padding: 20px;
+}
+.pt15{
+    padding-top: 15px;
+}
 .pL15 {
     padding-left: 15px;
 }
@@ -464,7 +469,7 @@ p {
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
-    line-height: 1.42857143;
+    line-height: 1.42857143 !important;
     color: #53a0d6 !important;
     background-color: #fff;
     background-image: none;
@@ -801,7 +806,9 @@ input[type="date"].full:before {
     background: #007ac8;
     color: #fff;
 }
-
+.backLightblue{
+    background: #e9f5fd;
+}
 .backDarkblue {
     background: #1a3e5b;
 }
@@ -895,7 +902,7 @@ input[type="date"].full:before {
 .table>tfoot>tr>td {
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
+    vertical-align: middle;
     border-top: 1px solid #adc8db;
 }
 
@@ -1309,13 +1316,14 @@ input[type="date"].full:before {
 
 .radio {
     padding-left: 19px;
-    margin: 0;
+    margin: 0 !important;
 }
 
 .radio label {
     display: inline-block;
     position: relative;
     padding-left: 5px;
+     color: #53a0d6 !important;
 }
 
 .radio label::before {
@@ -1539,10 +1547,14 @@ input[type="date"].full:before {
 .imgDoc {
     height: 100%;
 }
-/*NOMINA*/
-.thWidth{
-    width: 300px;
 
+.modal-body1 {
+    position: relative;
+    padding:0 15px;
+}
+/*NOMINA*/
+.space{
+width: 180px;
 }
 /*MEDIAQUERIS*/
 

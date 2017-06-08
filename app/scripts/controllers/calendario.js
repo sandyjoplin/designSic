@@ -17,7 +17,7 @@ angular.module('sicamsaApp')
     $scope.settings = {
       theme: 'mobiscroll',
       display: 'inline',
-      layout: 'liquid',
+      layout: 'liquid',  
       calendarScroll: 'horizontal',
       showOuterDays: true,
       showEventCount: true,
