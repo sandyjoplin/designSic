@@ -83,6 +83,16 @@ angular
               controller: 'NominaCtrl',
               controllerAs: 'nomina'
             })
+            .when('/controlVisitas', {
+              templateUrl: 'views/controlvisitas.html',
+              controller: 'ControlvisitasCtrl',
+              controllerAs: 'controlVisitas'
+            })
+            .when('/controlAccesos', {
+              templateUrl: 'views/controlaccesos.html',
+              controller: 'ControlaccesosCtrl',
+              controllerAs: 'controlAccesos'
+            })
             .otherwise({
                 redirectTo: '/'
             });
