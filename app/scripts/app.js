@@ -23,6 +23,7 @@ angular
         'mobiscroll-eventcalendar',
         'mobiscroll-calendar',
         'mobiscroll-select',
+        'mobiscroll-datetime',
         'mobiscroll-form'
     ])
     .config(function ($routeProvider, $locationProvider) {
@@ -88,10 +89,30 @@ angular
               controller: 'ControlvisitasCtrl',
               controllerAs: 'controlVisitas'
             })
-            .when('/controlAccesos', {
-              templateUrl: 'views/controlaccesos.html',
-              controller: 'ControlaccesosCtrl',
-              controllerAs: 'controlAccesos'
+            .when('/controlEquipos', {
+              templateUrl: 'views/controlequipos.html',
+              controller: 'ControlequiposCtrl',
+              controllerAs: 'controlEquipos'
+            })
+            .when('/controlAcceso', {
+              templateUrl: 'views/controlacceso.html',
+              controller: 'ControlaccesoCtrl',
+              controllerAs: 'controlAcceso'
+            })
+            .when('/controlEmbarcacion', {
+              templateUrl: 'views/controlembarcacion.html',
+              controller: 'ControlembarcacionCtrl',
+              controllerAs: 'controlEmbarcacion'
+            })
+            .when('/verificacionUnidades', {
+              templateUrl: 'views/verificacionunidades.html',
+              controller: 'VerificacionunidadesCtrl',
+              controllerAs: 'verificacionUnidades'
+            })
+            .when('/circuitoCerrado', {
+              templateUrl: 'views/circuitocerrado.html',
+              controller: 'CircuitocerradoCtrl',
+              controllerAs: 'circuitoCerrado'
             })
             .otherwise({
                 redirectTo: '/'

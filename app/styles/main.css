@@ -197,8 +197,12 @@ svg {
 .mL15 {
     margin-left: 15px;
 }
-
-
+.widthTab {
+    width: 350px !important;
+}
+.miModal{
+    width: 90%;
+}
 /*BORDER*/
 
 .bAzul {
@@ -904,7 +908,6 @@ input[type="date"].full:before {
 
 
 /*TABLA*/
-
 .table {
     margin-bottom: 0;
 }

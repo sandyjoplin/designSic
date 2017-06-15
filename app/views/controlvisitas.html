@@ -1,1 +1,413 @@
-<p>This is the controlVisitas view.</p>
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Control de Visitas</h1>
+    </div>
+    <div class="row backBlue1">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                    <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevaVisita">Nuevo registro</button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoVisitas">Formato Visitas</button>
+        </div>
+    </div>
+    <div class="row backWhite1">
+        <div class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="titleTable">
+                        <th></th>
+                        <th>FECHA</th>
+                        <th>HORA ENTRADA</th>
+                        <th>PROCEDENCIA</th>
+                        <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+                        <th>VISITA A:</th>
+                        <th>HORA SALIDA</th>
+                        <th>FIRMA</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable">ATOMICK</td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable">Gabriel</td>
+                        <td>13:00 am</td>
+                        <td></td>
+                        <td>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable">ATOMICK</td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable">Gabriel</td>
+                        <td>13:00 am</td>
+                        <td></td>
+                        <td>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable">ATOMICK</td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable">Gabriel</td>
+                        <td>13:00 am</td>
+                        <td></td>
+                        <td>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="NuevaVisita" tabindex="-1" role="dialog" aria-labelledby="">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="title">NUEVO REGISTRO DE VISITA</h1>
+            </div>
+            <div class="modal-body">
+                <form name="formVisita" class="">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha" placeholder="Fecha">
+                                <p class="textValid1 text-center" ng-show="formVisita.fecha.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre completo">
+                                <p class="textValid1 text-center" ng-show="formVisita.nombre.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="visita" name="visita" required ng-model="datos.visita" placeholder="A quien visita">
+                                <p class="textValid1 text-center" ng-show="formVisita.visita.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="time" mobiscroll-time="settingsDate"  class="form-inputs" id="horaEntrada" name="horaEntrada" required ng-model="datos.horaEntrada" placeholder="Hora de Entrada">
+                                        <p class="textValid1 text-center" ng-show="formVisita.horaEntrada.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="time"  mobiscroll-time="settingsDate" class="form-inputs" id="horaSalida" name="horaSalida" required ng-model="datos.horaSalida" placeholder="Hora de Salida">
+                                        <p class="textValid1 text-center" ng-show="formVisita.horaSalida.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="precedencia" name="precedencia" required ng-model="datos.precedencia" placeholder="Procedencia">
+                                <p class="textValid1 text-center" ng-show="formVisita.precedencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formVisita.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+               <!-- <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal fotmato de Visitas>-->
+<div class="modal fade" id="formatoVisitas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div id="printSectionId">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                    <h4 class="text-center textEdit">REGISTRO DE VISITAS</h4>
+                    <img src="images/logo.png" class="center-block" width="100px" alt="">
+                </div>
+                <div class="">
+                    <div class="table-responsive ">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr class="">
+                                    <th>FECHA</th>
+                                    <th>HORA ENTRADA</th>
+                                    <th>PROCEDENCIA</th>
+                                    <th>NOMBRE COMPLETO</th>
+                                    <th>VISITA A:</th>
+                                    <th>HORA SALIDA</th>
+                                    <th>FIRMA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary hvr-float-shadow " ng-click="printToCart('printSectionId')">Imprimir formato</button>
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>

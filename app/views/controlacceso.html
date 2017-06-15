@@ -1,0 +1,155 @@
+
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Control de Accesos</h1>
+    </div>
+    <div class="row backBlue1">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                    <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+    <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">         
+                <option>Filtrar por:</option>
+                <option>Recursos Humanos</option>
+                <option>Ventas</option>
+                <option>Manteniemiento</option>
+                <option></option>
+            </select>  
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoAccesos">Formato Accesos</button>
+        </div>
+    </div>
+    <div class="row backWhite1">
+        <div class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="titleTable">
+                        <th></th>
+                        <th>FECHA</th>
+                        <th>HORA ENTRADA</th>
+                        <th>FOTO</th>
+                        <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+                        <th>DEPARTAMENTO</th>
+                        <th>HORA SALIDA</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable"><button type="button" class="btn btnOperaciones">Operaciones</button></td>
+                        <td>13:00 am</td>
+                        <td>
+                            <div class="dropdown">
+                                <a  class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a  class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable"><button type="button" class="btn btnVentas">Ventas</button></td>
+                        <td>13:00 am</td>
+                        <td>
+                            <div class="dropdown">
+                                <a  class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a  class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a  class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>
+                            <div class="checkbox checkbox-primary text-center">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="mailTable alignV">12/01/2017</td>
+                        <td class="mailTable alignV">12:00 pm</td>
+                        <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="alignV nameTable">sandra juarez lopez</td>
+                        <td class="alignV nameTable"><button type="button" class="btn btnRecursos">Recursos Humanos</button></td>
+                        <td>13:00 am</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Modal fotmato de Accesos>-->
+<div class="modal fade" id="formatoAccesos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

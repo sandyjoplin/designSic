@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name sicamsaApp.controller:ControlaccesosCtrl
+ * @name sicamsaApp.controller:ControlembarcacionCtrl
  * @description
- * # ControlaccesosCtrl
+ * # ControlembarcacionCtrl
  * Controller of the sicamsaApp
  */
 angular.module('sicamsaApp')
-  .controller('ControlaccesosCtrl', function () {
+  .controller('ControlembarcacionCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name sicamsaApp.controller:ControlvisitasCtrl
+ * @name sicamsaApp.controller:ControlequiposCtrl
  * @description
- * # ControlvisitasCtrl
+ * # ControlequiposCtrl
  * Controller of the sicamsaApp
  */
 angular.module('sicamsaApp')
-  .controller('ControlvisitasCtrl', function ($scope) {
+  .controller('ControlequiposCtrl', function ($scope) {
    $scope.settingsInput = {
             theme: 'mobiscroll',
             display: 'bubble',
@@ -18,12 +18,6 @@ angular.module('sicamsaApp')
             theme: 'mobiscroll',
             display: 'bubble',
             minWidth: 200,
-            lang: 'es'
-        };
-         $scope.settingsDate = {
-            theme: 'mobiscroll',
-            display: 'bubble',
-            maxWidth: 200,
             lang: 'es'
         };
            $scope.printToCart = function(printSectionId) {
