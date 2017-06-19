@@ -1,6 +1,6 @@
 <section class="container-fluid marginRow">
     <div class="row">
-        <h1 class="title">Control de Accesos al Almacén</h1>
+        <h1 class="title">Control de Asistencias</h1>
     </div>
     <div class="row backBlue1">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -16,10 +16,10 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevoAcceso">Nuevo Registro</button>
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevaAsistencia">Nuevo Registro</button>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoAccesos">Formato Accesos</button>
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoAsistencias">Formato Asistencia</button>
         </div>
     </div>
     <div class="row backWhite1">
@@ -31,11 +31,9 @@
                         <th>FECHA</th>
                         <th>FOTO</th>
                         <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
-                        <th>PROCEDENCIA</th>
-                        <th>ASUNTO</th>
+                        <th>DEPARTAMENTO</th>
                         <th>HORA ENTRADA</th>
                         <th>HORA SALIDA</th>
-                        <th>FIRMA</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -52,10 +50,8 @@
                         <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
                         <td class="alignV nameTable">sandra juarez lopez</td>
                         <td class="alignV nameTable"><button type="button" class="btn btnRecursos">Recursos Humanos</button></td>
-                        <td class="alignV nameTable">ASUNTO</td>
                         <td class="mailTable alignV">12:00 pm</td>
                         <td class="mailTable alignV">13:00 am</td>
-                        <td class="alignV nameTable">FIRMA</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
@@ -82,10 +78,8 @@
                         <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
                         <td class="alignV nameTable">sandra juarez lopez</td>
                         <td class="alignV nameTable"><button type="button" class="btn btnRecursos">Recursos Humanos</button></td>
-                        <td class="alignV nameTable">ASUNTO</td>
                         <td class="mailTable alignV">12:00 pm</td>
                         <td class="mailTable alignV">13:00 am</td>
-                        <td class="alignV nameTable">FIRMA</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
@@ -112,10 +106,8 @@
                         <td class="alignV nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
                         <td class="alignV nameTable">sandra juarez lopez</td>
                         <td class="alignV nameTable"><button type="button" class="btn btnRecursos">Recursos Humanos</button></td>
-                        <td class="alignV nameTable">ASUNTO</td>
                         <td class="mailTable alignV">12:00 pm</td>
                         <td class="mailTable alignV">13:00 am</td>
-                        <td class="alignV nameTable">FIRMA</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
@@ -137,30 +129,28 @@
 </section>
 
 
+
+
 <!-- Modal -->
-<div class="modal fade" id="NuevoAcceso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="NuevaAsistencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="title">NUEVO REGISTRO DE ACCESO AL ALMACÉN</h1>
+                <h1 class="title">NUEVO REGISTRO DE ASISTENCIAS</h1>
             </div>
             <div class="modal-body">
-                <form name="formAlmacen" class="">
+                <form name="formAsistencias" class="">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
                                 <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha"
                                     placeholder="Fecha">
-                                <p class="textValid1 text-center" ng-show="formAlmacen.fecha.$error.required">Campo obligatorio</p>
+                                <p class="textValid1 text-center" ng-show="formAsistencias.fecha.$error.required">Campo obligatorio</p>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre completo">
-                                <p class="textValid1 text-center" ng-show="formAlmacen.nombre.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="asunto" name="asunto" required ng-model="datos.asunto" placeholder="Asunto">
-                                <p class="textValid1 text-center" ng-show="formAlmacen.asunto.$error.required">Campo obligatorio</p>
+                                <p class="textValid1 text-center" ng-show="formAsistencias.nombre.$error.required">Campo obligatorio</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -169,25 +159,25 @@
                                     <div class="form-group">
                                         <input mobiscroll-time="settingsDate" class="form-inputs" id="horaEntrada" name="horaEntrada" required ng-model="datos.horaEntrada"
                                             placeholder="Hora de Entrada">
-                                        <p class="textValid1 text-center" ng-show="formAlmacen.horaEntrada.$error.required">Campo obligatorio</p>
+                                        <p class="textValid1 text-center" ng-show="formAsistencias.horaEntrada.$error.required">Campo obligatorio</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <input mobiscroll-time="settingsDate" class="form-inputs" id="horaSalida" name="horaSalida" required ng-model="datos.horaSalida"
                                             placeholder="Hora de Salida">
-                                        <p class="textValid1 text-center" ng-show="formAlmacen.horaSalida.$error.required">Campo obligatorio</p>
+                                        <p class="textValid1 text-center" ng-show="formAsistencias.horaSalida.$error.required">Campo obligatorio</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-inputs" id="procedencia" name="procedencia" required ng-model="datos.procedencia" placeholder="Procedencia">
-                                <p class="textValid1 text-center" ng-show="formAlmacen.procedencia.$error.required">Campo obligatorio</p>
+                                <input type="text" class="form-inputs" id="procedencia" name="procedencia" required ng-model="datos.procedencia" placeholder="Departamento">
+                                <p class="textValid1 text-center" ng-show="formAsistencias.procedencia.$error.required">Campo obligatorio</p>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
-                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formAlmacen.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formAsistencias.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
                     </div>
                     <br>
                 </form>
@@ -200,14 +190,14 @@
 </div>
 
 <!-- Modal fotmato de Accesos>-->
-<div class="modal fade" id="formatoAccesos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="formatoAsistencias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div id="printSectionId">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
-                    <h4 class="text-center textEdit">REGISTRO DE ACCESO AL ALMACÉN</h4>
+                    <h4 class="text-center textEdit">REGISTRO DE ASISTENCIAS</h4>
                     <img src="images/logo.png" class="center-block" width="100px" alt="">
                 </div>
                 <div class="">
@@ -217,8 +207,7 @@
                                 <tr class="">
                                     <th>FECHA</th>
                                     <th>NOMBRE COMPLETO</th>
-                                    <th>PROCEDENCIA</th>
-                                    <th>ASUNTO</th>
+                                    <th>DEPARTAMENTO</th>
                                     <th>HORA ENTRADA</th>
                                     <th>HORA SALIDA</th>
                                     <th>FIRMA</th>
@@ -232,6 +221,117 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                     <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
                                     <td></td>
                                 </tr>
                                 <tr style="height:40px;">
@@ -250,6 +350,13 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                     <td></td>
+                                </tr>
+                                <tr style="height:40px;">
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
+                                    <td class=""></td>
                                     <td></td>
                                 </tr>
                                 <tr style="height:40px;">
@@ -259,7 +366,6 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                     <td></td>
-                                    <td></td>
                                 </tr>
                                 <tr style="height:40px;">
                                     <td class=""></td>
@@ -267,142 +373,6 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                     <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="height:40px;">
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td class=""></td>
-                                    <td></td>
                                     <td></td>
                                 </tr>
                             </tbody>

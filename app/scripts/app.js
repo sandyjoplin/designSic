@@ -114,6 +114,11 @@ angular
               controller: 'CircuitocerradoCtrl',
               controllerAs: 'circuitoCerrado'
             })
+            .when('/controlAsistencias', {
+              templateUrl: 'views/controlasistencias.html',
+              controller: 'ControlasistenciasCtrl',
+              controllerAs: 'controlAsistencias'
+            })
             .otherwise({
                 redirectTo: '/'
             });
