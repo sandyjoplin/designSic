@@ -168,6 +168,9 @@ svg {
 .p10 {
     padding: 10px;
 }
+.p15 {
+    padding:0px 15px !important;
+}
 .p20 {
     padding: 20px;
 }
@@ -392,9 +395,9 @@ p {
 }
 
 .btns {
-    background: #0094f1;
-    color: #fff;
-    border: 1px solid #0095d2;
+    background: #0094f1 !important;
+    color: #fff !important;
+    border: 1px solid #0095d2 
     outline: 0 !important;
     font-size: 14px;
 }

@@ -1,155 +1,1019 @@
 <section class="container-fluid marginRow">
     <div class="row">
-        <h1 class="title">Control de unidades</h1>
-    </div>
-    <div class="row backBlue1">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div id="custom-search-input">
-                <div class="input-group">
-                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
-                    <span class="input-group-btn">
-                    <button class="btn" type="button">
-                  <span class=" glyphicon glyphicon-search"></span>
-                    </button>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevaVisita">Nuevo Registro</button>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoVisitas">Formato Autos</button>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevaVisita">Formato Motos</button>
-        </div>
+        <h1 class="title">Control de Unidades</h1>
     </div>
     <div class="row bAzul">
         <ul class="row miTab tabDefault">
-            <li class="col-lg-6 text-center" ng-click="cambiarTabUno()">
+            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center" ng-click="cambiarTabUno()">
                 <a href="">
-                    <i class="fa fa-truck fa-lg" aria-hidden="true"></i> Automoviles
+                    <i class="fa fa-truck fa-lg" aria-hidden="true"></i> Automóviles
                 </a>
             </li>
-            <li class="col-lg-6 text-center" ng-click="cambiarTabUno()">
+            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center" ng-click="cambiarTabUno()">
                 <a href="">
                     <i class="fa fa-motorcycle fa-lg" aria-hidden="true"></i> Motocicletas
+                      </a>
             </li>
         </ul>
     </div>
-  <div ng-show="tabUno">
-  <div class="row backWhite1">
-        <div class="table-responsive ">
-            <table class="table table-striped">
-                <thead>
-                    <tr class="titleTable">
-                        <th></th>
-                        <th>FECHA</th>
-                        <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
-                        <th>PROCEDENCIA</th>
-                        <th>VISITA A</th>
-                        <th>HORA ENTRADA</th>
-                        <th>HORA SALIDA</th>
-                        <th>FIRMA</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary text-center">
-                                <input id="checkbox2" type="checkbox">
-                                <label for="checkbox2">
+    <div ng-show="tabUno">
+        <div class="row backBlue1">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                        <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                <button type="button" class="btn btns width100" data-toggle="modal" data-target="#registroAuto">Nuevo Registro Automóvil</button>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoAuto">Formato Automóvil</button>
+            </div>
+        </div>
+        <div class="row backWhite1">
+            <div class="table-responsive ">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="titleTable">
+                            <th></th>
+                            <th>FECHA</th>
+                            <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+                            <th>HORA ENTRADA</th>
+                            <th>HORA SALIDA</th>
+                            <th>FIRMA REALIZO</th>
+                            <th>FIRMA REVISO</th>
+                            <th>REPORTE</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
                                 </label>
-                            </div>
-                        </td>
-                        <td class="mailTable alignV">12/01/2017</td>
-                        <td class="alignV nameTable">sandra juarez lopez</td>
-                        <td class="alignV nameTable">ATOMICK</td>
-                        <td class="alignV nameTable">Gabriel</td>
-                        <td class="mailTable alignV">12:00 pm</td>
-                        <td>13:00 am</td>
-                        <td></td>
-                        <td>
-                            <div class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu miDro">
-                    <li>
-                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
-                    </li>
-                    <li>
-                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
-                    </li>
-                </ul>
-    </div>
-    </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="checkbox checkbox-primary text-center">
-                <input id="checkbox2" type="checkbox">
-                <label for="checkbox2">
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">02/11/2017</td>
+                            <td class="alignV nameTable">sandra juarez lopez</td>
+                            <td class="alignV nameTable">13:00 am</td>
+                            <td class="alignV nameTable">20:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteAuto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
                                 </label>
-            </div>
-        </td>
-        <td class="mailTable alignV">12/01/2017</td>
-        <td class="alignV nameTable">sandra juarez lopez</td>
-        <td class="alignV nameTable">ATOMICK</td>
-        <td class="alignV nameTable">Gabriel</td>
-        <td class="mailTable alignV">12:00 pm</td>
-        <td>13:00 am</td>
-        <td></td>
-        <td>
-            <div class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu miDro">
-                    <li>
-                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
-                    </li>
-                    <li>
-                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
-                    </li>
-                </ul>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="checkbox checkbox-primary text-center">
-                <input id="checkbox2" type="checkbox">
-                <label for="checkbox2">
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">11/11/2017</td>
+                            <td class="alignV nameTable">sandra juarez lopez</td>
+                            <td class="alignV nameTable">13:00 am</td>
+                            <td class="alignV nameTable">20:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteAuto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
                                 </label>
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">10/03/2017</td>
+                            <td class="alignV nameTable">sandra juarez lopez</td>
+                            <td class="alignV nameTable">13:00 am</td>
+                            <td class="alignV nameTable">20:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteAuto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </td>
-        <td class="mailTable alignV">12/01/2017</td>
-        <td class="alignV nameTable">sandra juarez lopez</td>
-        <td class="alignV nameTable">ATOMICK</td>
-        <td class="alignV nameTable">Gabriel</td>
-        <td class="mailTable alignV">12:00 pm</td>
-        <td>13:00 am</td>
-        <td></td>
-        <td>
-            <div class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu miDro">
-                    <li>
-                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
-                    </li>
-                    <li>
-                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
-                    </li>
-                </ul>
-            </div>
-        </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
+        </div>
     </div>
     <div ng-show="tabdos">
-        
+        <div class="row backBlue1">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                        <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                <button type="button" class="btn btns width100" data-toggle="modal" data-target="#registroMoto">Nuevo Registro Motocicleta</button>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoMoto">Formato Motocicleta</button>
+            </div>
+        </div>
+        <div class="row backWhite1">
+            <div class="table-responsive ">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="titleTable">
+                            <th></th>
+                            <th>FECHA</th>
+                            <th>NOMBRE <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+                            <th>HORA ENTRADA</th>
+                            <th>HORA SALIDA</th>
+                            <th>FIRMA REALIZO</th>
+                            <th>FIRMA REVISO</th>
+                            <th>REPORTE</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
+                                </label>
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">12/01/2017</td>
+                            <td class="alignV nameTable">Gabriel tsubaki</td>
+                            <td class="alignV nameTable">10:40 am</td>
+                            <td class="alignV nameTable">12:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteMoto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
+                                </label>
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">12/01/2017</td>
+                            <td class="alignV nameTable">Gabriel tsubaki</td>
+                            <td class="alignV nameTable">10:40 am</td>
+                            <td class="alignV nameTable">12:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteMoto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-primary text-center">
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
+                                </label>
+                                </div>
+                            </td>
+                            <td class="mailTable alignV">12/01/2017</td>
+                            <td class="alignV nameTable">Gabriel tsubaki</td>
+                            <td class="alignV nameTable">10:40 am</td>
+                            <td class="alignV nameTable">12:00 pm</td>
+                            <td class="mailTable alignV"></td>
+                            <td class="mailTable alignV"></td>
+                            <td><button type="button" class="btn btns width100" data-toggle="modal" data-target="#reporteMoto">Ver Reporte</button></td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu miDro">
+                                        <li>
+                                            <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </section>
+
+
+<!-- Modal Reporte Auto-->
+<div class="modal fade" id="reporteAuto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header backBlue2">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title" id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center">REPORTE DE AUTOMOVILES</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+            <div class="modal-footer backBlue2">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Reporte Moto-->
+<div class="modal fade" id="reporteMoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header backBlue2">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title" id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center">REPORTE DE MOTOCICLETAS</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+            <div class="modal-footer backBlue2">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal formato automoviles-->
+<div class="modal fade" id="formatoAuto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                <h4 class="text-center textEdit">REGISTRO DE AUTOMÓVILES</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                formato auto
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal formato Motocicletas-->
+<div class="modal fade" id="formatoMoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                <h4 class="text-center textEdit">REGISTRO DE MOTOCICLETAS</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                formato moto
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Nuevo registro Auto-->
+<div class="modal fade" id="registroAuto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                <h4 class="text-center textEdit">REGISTRO DE AUTOMÓVILES</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                <form name="formAutomoviles" class="">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha"
+                                    placeholder="Fecha">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.fecha.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre del Condutor">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.nombre.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="licencia" name="licencia" required ng-model="datos.licencia" placeholder="No de licencia">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.licencia.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.vigencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input mobiscroll-time="settingsDate" class="form-inputs" id="horaSalida" name="horaSalida" required ng-model="datos.horaSalida"
+                                            placeholder="Hora de Salida">
+                                        <p class="textValid1 text-center" ng-show="formAutomoviles.horaSalida.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input mobiscroll-time="settingsDate" class="form-inputs" id="horaLlegada" name="horaLlegada" required ng-model="datos.horaLlegada"
+                                            placeholder="Hora de Llegada">
+                                        <p class="textValid1 text-center" ng-show="formAutomoviles.horaLlegada.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-inputs" id="kilometrajeSalida" name="kilometrajeSalida" required ng-model="datos.kilometrajeSalida"
+                                            placeholder="Kilometraje de Salida">
+                                        <p class="textValid1 text-center" ng-show="formAutomoviles.kilometrajeSalida.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-inputs" id="kilometrajeLlegada" name="kilometrajeLlegada" required ng-model="datos.kilometrajeLlegada"
+                                            placeholder="Kilometraje de Llegada">
+                                        <p class="textValid1 text-center" ng-show="formAutomoviles.kilometrajeLlegada.$error.required">Campo obligatorio</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="procedencia" name="procedencia" required ng-model="datos.procedencia" placeholder="Departamento">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.procedencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 class="p15">DATOS DE LA UNIDAD</h4>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input mobiscroll-calendar="settingsInput" class="form-inputs" id="fechaServicio" name="fechaServicio" required ng-model="datos.fechaServicio"
+                                    placeholder="Fecha de Ultimo Servicio">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.fechaServicio.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="kmServicio" name="kmServicio" required ng-model="datos.kmServicio" placeholder="Kilometro de Ultimo Servicio">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.kmServicio.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="tipoServicio" name="tipoServicio" required ng-model="datos.tipoServicio" placeholder="Tipo de Ultimo Servicio">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.tipoServicio.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input mobiscroll-calendar="settingsInput" class="form-inputs" id="ultimaVerificacion" name="ultimaVerificacion" required
+                                    ng-model="datos.ultimaVerificacion" placeholder="Ultima verificación">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.ultimaVerificacion.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="tipoUnidad" name="tipoUnidad" required ng-model="datos.tipoUnidad" placeholder="Tipo de Unidad">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.tipoUnidad.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="noEconomico" name="noEconomico" required ng-model="datos.noEconomico" placeholder="No Economico">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.noEconomico.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Modelo">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.modelo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Combustible">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.modelo.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p15">
+                        <h4>ESTADO GENERAL DE LA UNIDAD DE TRANSPORTE</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="titleTable">
+                                        <th rowspan=2 class="text-center">CONCEPTO</th>
+                                        <th colspan=2 class="text-center">CUENTA CON </th>
+                                        <th rowspan=2 class="text-center">OBSERVACIONES</th>
+                                    </tr>
+                                    <tr class="titleTable text-center">
+                                        <td>SI</td>
+                                        <td>NO</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="textForm ">Caja de herramienta</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Batea de seguros</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Camper</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Llantas de Refracción</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Kit para cambio de llantas</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="titleTable">
+                                        <th rowspan=2 class="text-center">CONCEPTO</th>
+                                        <th colspan=2 class="text-center">ESTADO</th>
+                                        <th rowspan=2 class="text-center">OBSERVACIONES</th>
+                                    </tr>
+                                    <tr class="titleTable text-center">
+                                        <td>SI</td>
+                                        <td>NO</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="textForm">Limpieza de batea</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Hojalateria</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Pintura</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Luces</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Cristales</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Limpiadores</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Mecanismo</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Espejos laterales</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Llantas</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Claxon</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Extintor en cabina</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr class="textForm">
+                                        <td>Nivel de aceite</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Nivel de anticongelante</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row p15">
+                        <h4>PERSONAL Y EQUIPO DE SEGURIDAD</h4>
+                             <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="titleTable">
+                                        <th rowspan=2 class="text-center">CONCEPTO</th>
+                                        <th colspan=2 class="text-center">CUENTA CON </th>
+                                        <th colspan=2 class="text-center">ESTADO</th>
+                                    </tr>
+                                    <tr class="titleTable text-center">
+                                        <td>SI</td>
+                                        <td>NO</td>
+                                        <td>BIEN </td>
+                                        <td>MAL</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="textForm ">Caja de herramienta</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Batea de seguros</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Camper</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Llantas de Refracción</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textForm">Kit para cambio de llantas</td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value="option2"  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <textarea type="text" class="form-inputs" id="rhUno" name="rhUno" required ng-model="datos.rhUno" placeholder="" cols="30"
+                                                rows="5" style="height:70px;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha"
+                                    placeholder="Fecha">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.fecha.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="procedencia" name="procedencia" required ng-model="datos.procedencia" placeholder="Departamento">
+                                <p class="textValid1 text-center" ng-show="formAutomoviles.procedencia.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formAutomoviles.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Nuevo registro Moto-->
+<div class="modal fade" id="registroMoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                <h4 class="text-center textEdit">REGISTRO DE MOTOCICLETAS</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                registro moto
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
