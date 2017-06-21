@@ -728,8 +728,6 @@ input[type="date"].full:before {
     border: none;
     outline: 0;
 }
-
-
 /*SIDEBAR DOS*/
 
 .menuDos {
@@ -781,7 +779,6 @@ input[type="date"].full:before {
 .submenu>li>a:focus {
     color: #b7d761;
 }
-
 
 /*.menuAdm {
     font-family: 'AvenirLight';
@@ -1515,6 +1512,7 @@ input[type="date"].full:before {
 
 .miDro {
     left: -140px !important;
+    margin-bottom: 30px !important;
 }
 
 .well {
