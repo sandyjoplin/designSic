@@ -397,7 +397,7 @@ p {
 .btns {
     background: #0094f1 !important;
     color: #fff !important;
-    border: 1px solid #0095d2 
+    border: 1px solid #0095d2 ;
     outline: 0 !important;
     font-size: 14px;
 }
@@ -656,6 +656,7 @@ input[type="date"].full:before {
 .top-nav>.open>.dropdown-menu {
     float: left;
     position: absolute;
+    z-index: 10000 !important;
     margin-top: 0;
     border: 1px solid rgba(0, 0, 0, .15);
     border-top-left-radius: 0;
@@ -1540,7 +1541,7 @@ input[type="date"].full:before {
 .inactivo {
     color: #d9534f;
 }
-
+/*
 #miGrid .miGrid-item {
     padding: 15px 0;
 }
@@ -1581,7 +1582,7 @@ input[type="date"].full:before {
     margin: 0 auto;
     background: #fff;
     max-width: 200px;
-    height: 80px;
+    height: 140px;
     border: 1px solid #b7d761;
 }
 
@@ -1590,21 +1591,23 @@ input[type="date"].full:before {
     font-family: 'AvenirMedium';
     font-size: 14px;
 }
-
-#miGrid * {
-    z-index: 2;
-}
+*/
 
 .textDoc {
     color: #007ac8;
     font-family: 'AvenirMedium';
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 35px;
 }
 
 .imgDoc {
     height: 100%;
+    width: 100% !important;
 }
-
+.desDoc{
+    height: 120px;
+    padding: 10px 0;
+}
 .modal-body1 {
     position: relative;
     padding:0 15px;
