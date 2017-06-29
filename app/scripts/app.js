@@ -119,6 +119,11 @@ angular
               controller: 'ControlasistenciasCtrl',
               controllerAs: 'controlAsistencias'
             })
+            .when('/miPerfil', {
+              templateUrl: 'views/miperfil.html',
+              controller: 'MiperfilCtrl',
+              controllerAs: 'miPerfil'
+            })
             .otherwise({
                 redirectTo: '/'
             });
