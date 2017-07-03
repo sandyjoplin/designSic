@@ -1,0 +1,868 @@
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Unidades</h1>
+    </div>
+
+    <div class="row backBlue1">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                    <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">
+                <option>Filtrar por:</option>
+                <option>Recursos Humanos</option>
+                <option>Ventas</option>
+                <option>Manteniemiento</option>
+                <option></option> 
+            </select>
+        </div> 
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#nuevoEmpleado">Nueva Unidad</button>
+        </div>
+    </div>
+    <div class="row backWhite1">
+        <div class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="titleTable">
+                        <th>EXP</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th>MODELO</th>
+                        <th>TRANSMISIÓN</th>
+                        <th>SERIE</th>
+                        <th>MOTOR</th>
+                        <th>PLACA ACTUAL</th>
+                        <th>A NOMBRE DE</th>
+                        <th>VENDEDOR</th>
+                        <th>ASEGURADORA</th>
+                        <th>SEGURO</th>
+                        <th>VIGENCIA DE SEGURO</th>
+                        <th>NUMERO DE POLIZA</th>
+                        <th>VERIFICACIÓN</th>
+                        <th>UBICACIÓN</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnRecursos">Recursos Humanos</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                         <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnVentas">Ventas</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                       <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnFacturacion">Facturación</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnOperaciones">Operaciones</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                         <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnTrafico">Trafico</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                         <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnMensajeria">Mensajeria</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnContabilidad">Contabilidad</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                         <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnCalidad">Calidad</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnMantenimiento">Mantenimiento</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                         <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnAlmacen">Almacén</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td class="nameTable alignV"></td>
+                        <td class="mailTable alignV"></td>
+                        <td>
+                            <button type="button" class="btn btnVigilancia">Vigilancia</button>
+                        </td>
+                        <th>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a href="#/perfil" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Modal Nuevo Empleado -->
+<div class="modal fade" id="nuevoEmpleado" tabindex="-1" role="dialog" aria-labelledby="">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="title">NUEVO EMPLEADO</h1>
+            </div>
+            <div class="modal-body">
+                <section class="container-fluid marginRow backWhite1">
+                    <div class="row">
+                        <ul class="miTab tabDefault">
+                            <li class="col33 text-center" ng-click="tabUnofn()">
+                                <a href="">
+                                    <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
+                                    <br> Datos de Identificación
+                                </a>
+                            </li>
+                            <li class="col33 text-center" ng-click="tabDosfn()">
+                                <a href="">
+                                    <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
+                                    <br> Datos de Contacto
+                                </a>
+                            </li>
+                            <li class="col33 text-center" ng-click="tabTresfn()">
+                                <a href="">
+                                    <i class="fa fa-black-tie fa-lg" aria-hidden="true"></i>
+                                    <br> Datos Laborales
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div ng-show="tabU">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <br>
+                                        <form name="formIdentificacion" class="">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <img src="images/profile.png" class="imgRegistro center-block" alt="">
+                                                    <div class="form-group">
+                                                        <span class="form-inputs"> 
+                                    <div class="carga-archivo-input text-center"> 
+                                        <span class=""><i class="fa fa-upload" aria-hidden="true"></i></span>
+                                                        <span class="carga-archivo-input-title">Seleccionar imagen</span>
+                                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                                    </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre">
+                                                    <p class="textValid1 text-center" ng-show="formIdentificacion.nombre.$error.required">Campo obligatorio</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="apellidoPat" name="apellidoPat" required ng-model="datos.apellidoPat" placeholder="Apellido Paterno">
+                                                    <p class="textValid1 text-center" ng-show="formIdentificacion.apellidoPat.$error.required">Campo obligatorio</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="apellidoMat" name="apellidoMat" required ng-model="datos.apellidoMat" placeholder="Apellido Materno">
+                                                    <p class="textValid1 text-center" ng-show="formIdentificacion.apellidoMat.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-mf-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="form-inputs">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                            <span>Sexo</span>
+                                                        </div>
+                                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                            <span class="radio radio-primary">
+                                                          <input type="radio" name="sexo" id="sexo" value="option2"  required ng-model="datos.sexo" >
+                                                            <label for="sexo">  Hombre</label>
+                                                         </span>
+                                                        </div>
+                                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                            <span class="radio radio-primary">
+                                                          <input type="radio" name="sexo" id="sexo" value="option2"  required ng-model="datos.sexo" >
+                                                            <label for="sexo">  Mujer </label>
+                                                          </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.sexo.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="curp" name="curp" required ng-model="datos.curp" placeholder="Curp">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.curp.$error.required">Campo obligatorio</p>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="number" class="form-inputs" id="licencia" name="licencia" required ng-model="datos.licencia" placeholder="Número de licencia">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.licencia.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="nacionalidad" id="nacionalidad" required ng-model="datos.nacionalidad" mobiscroll-select="settingsSelect">
+                                                    <option value="">Nacionalidad</option>
+                                                    <option value="opciones">México</option>
+                                                    <option value="opciones">E.U.A</option>
+                                                    <option value="opciones">España</option>
+                                                    <option value="opciones">Perú</option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacionalidad.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="escolaridad" name="escolaridad" required ng-model="datos.escolaridad" placeholder="Escolaridad">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.escolaridad.$error.required">Campo obligatorio</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-mf-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <input type="date" class="form-inputs" id="nacimiento" name="nacimiento" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoUno"
+                                                    required ng-model="datos.nacimiento" placeholder="Fecha de Nacimiento ">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.nacimiento.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="rfc" name="rfc" required ng-model="datos.rfc" placeholder="RFC">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.rfc.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="date" class="form-inputs" id="vigencia" name="vigencia" mobiscroll-calendar="settingsInput" mobiscroll-instance="demoDos"
+                                                    required ng-model="datos.vigencia" placeholder="Vigencia de Licencia">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.vigencia.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="lugarNacimiento" id="lugarNacimiento" required ng-model="datos.lugarNacimiento"
+                                                    mobiscroll-select="settingsSelect">
+                                                    <option value="">Lugar de nacimiento</option>
+                                                    <option value="opciones">CDMX</option>
+                                                    <option value="opciones">Puebla</option>
+                                                    <option value="opciones">Tabasco</option>
+                                                    <option value="opciones">Guadalajara</option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.lugarNacimiento.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="tratamiento" name="tratamiento" required ng-model="datos.tratamiento" placeholder="Tratamiento">
+                                                <p class="textValid1 text-center" ng-show="formIdentificacion.tratamiento.$error.required">Campo obligatorio</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" ng-click="administrador.identificacion(datos)" ng-disabled="formIdentificacion.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                                    </div>
+                                    <br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="tabD">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <form name="formContacto" class="">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-inputs" id="calle" name="calle" required ng-model="datos.calle" placeholder="Calle">
+                                                <p class="textValid1 text-center" ng-show="formContacto.calle.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="ciudad" id="ciudad" required ng-model="datos.ciudad" mobiscroll-select="settingsSelect"
+                                                    s>
+                                                    <option value="">Ciudad</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formContacto.ciudad.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="estado" id="estado" required ng-model="datos.estado" mobiscroll-select="settingsSelect">
+                                                    <option value="">Estado</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formContacto.estado.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="pais" id="pais" required ng-model="datos.pais" mobiscroll-select="settingsSelect">
+                                                    <option value="">País</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formContacto.pais.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-inputs" id="telefonoFijo" name="telefonoFijo" required ng-model="datos.telefonoFijo" placeholder="Teléfono fijo">
+                                                <p class="textValid1 text-center" ng-show="formContacto.telefonoFijo.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-inputs" id="email" name="email" required ng-model="datos.email" placeholder="Email">
+                                                <p class="textValid1 text-center" ng-show="formContacto.email.$error.required">Campo obligatorio</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-inputs" id="exterior" name="exterior" required ng-model="datos.exterior" placeholder="No. Ext">
+                                                        <p class="textValid1 text-center" ng-show="formContacto.exterior.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-inputs" id="interior" name="interior" required ng-model="datos.interior" placeholder="No. Int">
+                                                        <p class="textValid1 text-center" ng-show="formContacto.interior.$error.required">Campo obligatorio</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-inputs center-block" name="colonia" id="colonia" required ng-model="datos.colonia" mobiscroll-select="settingsSelect">
+                                                    <option value="">Colonia</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formContacto.colonia.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-inputs" id="cp" name="cp" required ng-model="datos.cp" placeholder="Código Postal">
+                                                <p class="textValid1 text-center" ng-show="formContacto.cp.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <select id="asentamiento" name="asentamiento" class="form-inputs" required ng-model="datos.asentamiento" mobiscroll-select="settingsSelect">
+                                                    <option name="" value="">Tipo de asentamiento</option>
+                                                    <option value="opcion"></option>
+                                                </select>
+                                                <p class="textValid1 text-center" ng-show="formContacto.asentamiento.$error.required">Campo obligatorio</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-inputs" id="celular" name="celular" required ng-model="datos.celular" placeholder="Teléfono Celular">
+                                                <p class="textValid1 text-center" ng-show="formContacto.celular.$error.required">Campo obligatorio</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" ng-click="administrador.contacto(datos)" ng-disabled="formContacto.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                                    </div>
+                                    <br>
+                                </form>
+                            </div>
+                        </div>
+                        <div ng-show="tabT">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                            <form name="formLaborales" class="">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="departamento" id="departamento" required ng-model="datos.departamento" mobiscroll-select="settingsSelect">
+                                                    <option value="">Departamento</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.departamento.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="numEmpleado" name="numEmpleado" required ng-model="datos.numEmpleado" placeholder="Número de empleado">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.numEmpleado.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="date" class="form-inputs" id="contratacion" name="contratacion" required ng-model="datos.contratacion" placeholder="Fecha de Contratación"
+                                                mobiscroll-calendar="settingsInput">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.contratacion.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="horario" name="horario" required ng-model="datos.horario" placeholder="Horario laboral">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.horario.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="telefono" name="telefono" required ng-model="datos.telefono" placeholder="Teléfono">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.telefono.$error.required">Campo obligatorio</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="tarjeta" name="tarjeta" required ng-model="datos.tarjeta" placeholder="Número de tarjeta">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.tarjeta.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="nss" name="nss" required ng-model="datos.nss" placeholder="Número de Seguro Social">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.nss.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="pantalon" name="pantalon" required ng-model="datos.pantalon" placeholder="Talla de pantalón">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.pantalon.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="puesto" id="puesto" required ng-model="datos.puesto" mobiscroll-select="settingsSelect">
+                                                    <option value="">Puesto</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.puesto.$error.required">Campo obligatorio</p>
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <div class=" form-inputs">
+                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p0">
+                                                    <div class="dropdown">
+                                                        <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Privilegios</a>
+                                                        <ul class="dropdown-menu p10">
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textConsultar">Consultar
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textNew">Nuevo
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textEdit">Editar
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="privilegios" id="privilegios" required ng-model="datos.privilegios">
+                                                                    <label for="" class="textDelete">Eliminar
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                    <div class="">
+                                                        <span class="textNew1"> Consultar ,</span> <span class="textNew1"> Nuevo ,</span>
+                                                        <span class="textNew1"> Editar , </span> <span class="textNew1"> Eliminar .</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.privilegios.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class=" form-inputs">
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p0">
+                                                    <div class="dropdown">
+                                                        <a href="" class="dropdown-toggle textForm" data-toggle="dropdown">Días laborales</a>
+                                                        <ul class="dropdown-menu p10">
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Viernes
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Sabado
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox checkbox-primary">
+                                                                    <input type="checkbox" name="diasLaborales" id="diasLaborales" required ng-model="datos.diasLaborales">
+                                                                    <label for="" class="textNew">Lunes-Domingo
+                                                                        </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                    <div class="">
+                                                        <span class="textNew1"> Lunes-Viernes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.diasLaborales.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="horarioComida" name="horarioComida" required ng-model="datos.horarioComida" placeholder="Horario de comida">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.horarioComida.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-inputs" id="extension" name="extension" required ng-model="datos.extension" placeholder="Extensión">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.extension.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-inputs center-block" name="banco" id="banco" required ng-model="datos.banco" mobiscroll-select="settingsSelect">
+                                                    <option value="">Institución bancaria</option>
+                                                    <option name="" value="opcion"></option>
+                                                </select>
+                                            <p class="textValid1 text-center" ng-show="formLaborales.banco.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="camiseta" name="camiseta" required ng-model="datos.camiseta" placeholder="Talla de camiseta">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.camiseta.$error.required">Campo obligatorio</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-inputs" id="zapatos" name="zapatos" required ng-model="datos.zapatos" placeholder="Talla de zapatos">
+                                            <p class="textValid1 text-center" ng-show="formLaborales.zapatos.$error.required">Campo obligatorio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                                </div>
+                                <br>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>          <button type="button" class="btn btn-primary">Guardar</button>
+            </div>-->
+        </div>
+    </div>
+</div>
+</div>

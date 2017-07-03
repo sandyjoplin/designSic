@@ -124,6 +124,11 @@ angular
               controller: 'MiperfilCtrl',
               controllerAs: 'miPerfil'
             })
+            .when('/unidades', {
+              templateUrl: 'views/unidades.html',
+              controller: 'UnidadesCtrl',
+              controllerAs: 'unidades'
+            })
             .otherwise({
                 redirectTo: '/'
             });
