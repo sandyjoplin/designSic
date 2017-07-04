@@ -3,7 +3,7 @@
         <h1 class="title">Solicitudes Permisos o Vacaciones</h1>
     </div>
     <div class="row backBlue1">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 p5">
             <div id="custom-search-input">
                 <div class="input-group">
                     <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
@@ -15,21 +15,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">
-                <option>Filtrar por:</option>
-                <option>Recursos Humanos</option>
-                <option>Ventas</option>
-                <option>Manteniemiento</option>
-                <option></option>
-            </select>
+         <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center p5">
+          <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoSolicitudPersonal">Solicitud de Personal</button>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoPermisos">Enviar Solicitud</button>
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center p5">
+          <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoPermisosSalida">Enviar Permiso Salida</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center p5">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#formatoPermisosVacaciones">Enviar Permiso Vacaciones</button>
         </div>
     </div>
     <div class="row backWhite1">
-        <div class="table-responsive ">
+        <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr class="titleTable">
@@ -383,7 +380,7 @@
 </section>
 <!-- Modal ver solicitud -->
 
-<div class="modal fade" id="verSolicitud" tabindex="-1" role="dialog">
+<div class="modal fade" id="verVacaciones" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header backBlue2">
@@ -590,15 +587,325 @@
     </div>
 </div>
 
-<!-- Modal Formato-->
+<!-- Modal Formato solicitud personal-->
 
-<div class="modal fade" id="formatoPermisos" tabindex="-1" role="dialog">
+<div class="modal fade" id="formatoSolicitudPersonal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content" id="printSectionId">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
-                <h4 class="text-center textEdit">SOLICITUD DE PERMISO O VACACIONES</h4>
+                <h4 class="text-center textEdit">SOLICITUD DE SOLICITUD DE PERSONAL</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                <form name="formPermisos" class="">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="nombreSolicitante" name="nombreSolicitante" required ng-model="datos.nombreSolicitante"
+                                    placeholder="Nombre del solicitante">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaSolicitud" name="fechaSolicitud" required ng-model="datos.fechaSolicitud" placeholder="Fecha de solicitud"
+                                    mobiscroll-calendar="settingsInput">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo aignV">SG</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">CG</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaIngreso" name="fechaIngreso" required ng-model="datos.fechaIngreso" placeholder="Fecha de Ingreso"
+                                    mobiscroll-calendar="settingsInput">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Vacaciones</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Permiso</label>
+                                           </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Otro</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="especifique" name="especifique" required ng-model="datos.especifique" placeholder="Especifique">
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-inputs" id="diasSolicitados" name="diasSolicitados" required ng-model="datos.diasSolicitados"
+                                    placeholder="Cantidad de dias solicitados">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-center textForm">Días solicitados</p><br>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaUno" name="diaUno" required ng-model="datos.diaUno" placeholder="Día" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaDos" name="diaDos" required ng-model="datos.diaDos" placeholder="A Día" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-center textForm">Horas solicitadas</p><br>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="horaUno" name="horaUno" required ng-model="datos.horaUno" placeholder="Hora de salida" mobiscroll-calendar="settingsInput">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="horaDos" name="horaDos" required ng-model="datos.horaDos" placeholder="Hora de Regreso" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="observaciones" name="observaciones" required ng-model="datos.observaciones"
+                                    placeholder="Observaciones" cols="30" rows="5" style="height:100px;"></textarea>
+
+                            </div>
+                        </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="rh" name="rh" required ng-model="datos.rh" placeholder="VoBo Recursos humanos"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="jefe" name="jefe" required ng-model="datos.jefe" placeholder="Autorización Jefe Inmediato"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="gerencia" name="gerencia" required ng-model="datos.gerencia" placeholder="VoBo Gerencia Operativa"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary hvr-float-shadow " ng-click="printToCart('printSectionId')">Imprimir formato</button>
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<!-- Modal Formato Permisos salida-->
+
+
+<div class="modal fade" id="formatoPermisosSalida" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" id="printSectionId">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center textEdit">SOLICITUD DE PERMISO DE SALIDA</h4>
+                <img src="images/logo.png" class="center-block" width="100px" alt="">
+            </div>
+            <div class="modal-body">
+                <form name="formPermisos" class="">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="nombreSolicitante" name="nombreSolicitante" required ng-model="datos.nombreSolicitante"
+                                    placeholder="Nombre del solicitante">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaSolicitud" name="fechaSolicitud" required ng-model="datos.fechaSolicitud" placeholder="Fecha de solicitud"
+                                    mobiscroll-calendar="settingsInput">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo aignV">SG</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">CG</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaIngreso" name="fechaIngreso" required ng-model="datos.fechaIngreso" placeholder="Fecha de Ingreso"
+                                    mobiscroll-calendar="settingsInput">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Vacaciones</label>
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Permiso</label>
+                                           </span>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
+                                             <input type="radio" name="razon" id="razon" value="option2"  required ng-model="datos.razon" >
+                                             <label for="sexo">Otro</label>
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="especifique" name="especifique" required ng-model="datos.especifique" placeholder="Especifique">
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-inputs" id="diasSolicitados" name="diasSolicitados" required ng-model="datos.diasSolicitados"
+                                    placeholder="Cantidad de dias solicitados">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-center textForm">Días solicitados</p><br>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaUno" name="diaUno" required ng-model="datos.diaUno" placeholder="Día" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="diaDos" name="diaDos" required ng-model="datos.diaDos" placeholder="A Día" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-center textForm">Horas solicitadas</p><br>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="horaUno" name="horaUno" required ng-model="datos.horaUno" placeholder="Hora de salida" mobiscroll-calendar="settingsInput">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <input class="form-inputs" id="horaDos" name="horaDos" required ng-model="datos.horaDos" placeholder="Hora de Regreso" mobiscroll-calendar="settingsInput">
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="observaciones" name="observaciones" required ng-model="datos.observaciones"
+                                    placeholder="Observaciones" cols="30" rows="5" style="height:100px;"></textarea>
+
+                            </div>
+                        </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="rh" name="rh" required ng-model="datos.rh" placeholder="VoBo Recursos humanos"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="jefe" name="jefe" required ng-model="datos.jefe" placeholder="Autorización Jefe Inmediato"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="gerencia" name="gerencia" required ng-model="datos.gerencia" placeholder="VoBo Gerencia Operativa"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" ng-click="about.empleado(datos)" ng-disabled="formLaborales.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary hvr-float-shadow " ng-click="printToCart('printSectionId')">Imprimir formato</button>
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!-- Modal Formato-->
+
+<div class="modal fade" id="formatoPermisosVacaciones" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" id="printSectionId">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE RECURSOS HUMANOS</h3>
+                <h4 class="text-center textEdit">SOLICITUD DE PERMISO DE VACACIONES</h4>
                 <img src="images/logo.png" class="center-block" width="100px" alt="">
             </div>
             <div class="modal-body">

@@ -9,7 +9,7 @@
  */
 angular.module('sicamsaApp')
   .controller('UnidadesCtrl', function ($scope) {
-       $scope.settingsInput = {
+           $scope.settingsInput = {
             theme: 'mobiscroll',
             display: 'bubble',
             lang: 'es',

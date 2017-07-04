@@ -205,6 +205,7 @@ svg {
 .widthTab {
     width: 350px !important;
 }
+
 .miModal{
     width: 90%;
 }
@@ -920,12 +921,23 @@ input[type="date"].full:before {
     font-size: 14px;
     font-family: 'AvenirLight';
     background: #1a3e5b;
+    white-space: nowrap;
 }
 
 .nameTable {
     color: #20507c;
     font-family: 'AvenirLight';
     padding-left: 5px;
+    text-align: justify;
+    white-space: nowrap;
+}
+.nameTable1 {
+    color: #20507c;
+    font-family: 'AvenirLight';
+    padding-left: 5px;
+    text-align: justify;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .mailTable {
@@ -943,6 +955,22 @@ input[type="date"].full:before {
     line-height: 1.42857143;
     vertical-align: middle;
     border-top: 1px solid #adc8db;
+}
+.comprada{
+background: #007ac8 !important;
+color: #ffffff !important;
+}
+.perdida{
+background:  #d9534f  !important;
+color: 
+}
+.robada{
+background:  #f0ad4e  !important;
+color: 
+}
+.vendida{
+background: #5cb85c  !important;
+color: 
 }
 
 .btnAdmin {

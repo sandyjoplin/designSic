@@ -129,6 +129,11 @@ angular
               controller: 'UnidadesCtrl',
               controllerAs: 'unidades'
             })
+            .when('/unidades', {
+              templateUrl: 'views/unidades.html',
+              controller: 'UnidadesCtrl',
+              controllerAs: 'unidades'
+            })
             .otherwise({
                 redirectTo: '/'
             });
