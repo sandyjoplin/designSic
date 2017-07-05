@@ -957,20 +957,17 @@ input[type="date"].full:before {
     border-top: 1px solid #adc8db;
 }
 .comprada{
-background: #007ac8 !important;
-color: #ffffff !important;
+color: #007ac8 !important;
 }
 .perdida{
-background:  #d9534f  !important;
-color: 
+color:  #d9534f  !important;
 }
 .robada{
-background:  #f0ad4e  !important;
-color: 
+color:  #f0ad4e  !important;
+
 }
 .vendida{
-background: #5cb85c  !important;
-color: 
+color:  #5cb85c  !important;
 }
 
 .btnAdmin {

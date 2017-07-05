@@ -129,10 +129,15 @@ angular
               controller: 'UnidadesCtrl',
               controllerAs: 'unidades'
             })
-            .when('/unidades', {
-              templateUrl: 'views/unidades.html',
-              controller: 'UnidadesCtrl',
-              controllerAs: 'unidades'
+            .when('/perfilUnidad', {
+              templateUrl: 'views/perfilunidad.html',
+              controller: 'PerfilunidadCtrl',
+              controllerAs: 'perfilUnidad'
+            })
+            .when('/articulos', {
+              templateUrl: 'views/articulos.html',
+              controller: 'ArticulosCtrl',
+              controllerAs: 'articulos'
             })
             .otherwise({
                 redirectTo: '/'
