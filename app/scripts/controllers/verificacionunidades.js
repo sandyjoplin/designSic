@@ -32,13 +32,7 @@ angular.module('sicamsaApp')
       $scope.tabUno = !$scope.tabUno;
       $scope.tabdos = !$scope.tabdos;
     }
-
-
-
-
-
-
-
+    
     $scope.tabU = true;
     $scope.tabD = false;
     $scope.tabT = false;
