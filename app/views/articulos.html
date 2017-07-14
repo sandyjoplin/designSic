@@ -6,7 +6,7 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" class="search-query form-control" placeholder=" Buscar personal" />
+                    <input type="text" class="search-query form-control" placeholder="Buscar artículo" />
                     <span class="input-group-btn">
                     <button class="btn" type="button">
                   <span class=" glyphicon glyphicon-search"></span>
@@ -25,7 +25,7 @@
             </select>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
-            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevaAsistencia">Nuevo articulo</button>
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#NuevoArticulo">Nuevo articulo</button>
         </div>
     </div>
     <div class="row backWhite1">
@@ -35,10 +35,10 @@
                     <tr class="titleTable">
                         <th>CÓDIGO</th>
                         <th>NOMBRE</th>
-                        <th>DESCRIPCIÓN</th>
                         <th>IMAGEN</th>
                         <th>STOCK MAX</th>
                         <th>STOCK MIN</th>
+                        <th>DESCRIPCIÓN</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -46,16 +46,16 @@
                     <tr>
                         <td class="nameTable">12434</td>
                         <td class="nameTable">PASTA</td>
-                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
-                        <td>1283</td>
-                        <td>622</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu miDro">
                                     <li>
-                                        <a class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
+                                        <a href="#/perfilArticulo"  class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
                                     </li>
                                     <li>
                                         <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
@@ -70,16 +70,16 @@
                     <tr>
                         <td class="nameTable">12434</td>
                         <td class="nameTable">PASTA</td>
-                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
-                        <td>1283</td>
-                        <td>622</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu miDro">
                                     <li>
-                                        <a class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
+                                        <a href="#/perfilArticulo"  class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
                                     </li>
                                     <li>
                                         <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
@@ -94,16 +94,16 @@
                     <tr>
                         <td class="nameTable">12434</td>
                         <td class="nameTable">PASTA</td>
-                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
-                        <td>1283</td>
-                        <td>622</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                         <td>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu miDro">
                                     <li>
-                                        <a class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
+                                        <a href="#/perfilArticulo" class="textNew"><i class="fa fa-eye" aria-hidden="true"></i> Ver articulo</a>
                                     </li>
                                     <li>
                                         <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
@@ -125,7 +125,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="NuevaAsistencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="NuevoArticulo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -148,11 +148,24 @@
                                 </span>
                             </div>
                         </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" class="form-inputs" id="stockMax" name="stockMax" required ng-model="datos.stockMax" placeholder="Stock Máximo">
+                            <p class="textValid1 text-center" ng-show="formArticulo.stockMax.$error.required">Campo obligatorio</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-inputs" id="stockMin" name="stockMin" required ng-model="datos.stockMin" placeholder="Stock Minimo">
+                            <p class="textValid1 text-center" ng-show="formArticulo.stockMin.$error.required">Campo obligatorio</p>
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" class="form-inputs" id="comentarios" name="comentarios" required ng-model="datos.comentarios" placeholder="Comentarios"
+                                cols="30" rows="5" style="height:100px;"></textarea>
+                            <p class="textValid1 text-center" ng-show="formArticulo.comentarios.$error.required">Campo obligatorio</p>
+                        </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <input type="text"  class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo"
-                                placeholder="Código">
+                            <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Código">
                             <p class="textValid1 text-center" ng-show="formArticulo.codigo.$error.required">Campo obligatorio</p>
                         </div>
                         <div class="form-group">
@@ -160,13 +173,45 @@
                             <p class="textValid1 text-center" ng-show="formArticulo.nombre.$error.required">Campo obligatorio</p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-inputs" id="procedencia" name="procedencia" required ng-model="datos.procedencia" placeholder="Descripción">
-                            <p class="textValid1 text-center" ng-show="formAsistencias.procedencia.$error.required">Campo obligatorio</p>
+                            <select class="form-inputs center-block" name="familia" id="familia" required ng-model="datos.familia" mobiscroll-select="settingsSelect">
+                                                    <option value="">Almacén familia</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                            <p class="textValid1 text-center" ng-show="formArticulo.familia.$error.required">Campo obligatorio</p>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-inputs center-block" name="unidadMedida" id="unidadMedida" required ng-model="datos.unidadMedida" mobiscroll-select="settingsSelect">
+                                                    <option value="">Unidad de medida</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                            <p class="textValid1 text-center" ng-show="formArticulo.unidadMedida.$error.required">Campo obligatorio</p>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-inputs center-block" name="proveedor" id="proveedor" required ng-model="datos.proveedor" mobiscroll-select="settingsSelect">
+                                                    <option value="">Proveedor</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                            <p class="textValid1 text-center" ng-show="formArticulo.proveedor.$error.required">Campo obligatorio</p>
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" class="form-inputs" id="descripcion" name="descripcion" required ng-model="datos.descripcion" placeholder="Descripción"
+                                cols="30" rows="5" style="height:100px;"></textarea>
+                            <p class="textValid1 text-center" ng-show="formArticulo.descripcion.$error.required">Campo obligatorio</p>
                         </div>
                     </div>
             </div>
             <div class="text-center">
-                <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formAsistencias.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formArticulo.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
             </div>
             <br>
             </form>

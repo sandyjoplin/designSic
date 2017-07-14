@@ -1,0 +1,316 @@
+<section class="container-fluid marginRow">
+    <div class="row">
+        <h1 class="title">Entradas y Salidas</h1>
+    </div>
+    <div class="row backBlue1">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6 text-center p5">
+            <select class="form-control1 center-block" mobiscroll-select="settingsSelect" ng-model="filtro">
+                <option>Ver articulos de:</option>
+                <option>Refracciones</option>
+                <option>Papeleria</option>
+                <option>Uniformes y otros</option>
+                <option>Hojalateria</option>
+            </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6 text-center p5">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#Entrada">Entrada</button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6 text-center p5">
+            <button type="button" class="btn btns width100" data-toggle="modal" data-target="#Salida">Salida</button>
+        </div>
+    </div>
+    <div class="row backWhite1">
+        <div class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="titleTable">
+                        <th>CÓDIGO</th>
+                        <th>FECHA</th>
+                        <th>NOMBRE</th>
+                        <th>IMAGEN</th>
+                        <th>MOVIMIENTO</th>
+                        <th>STOCK MAX</th>
+                        <th>STOCK MIN</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="nameTable">12434</td>
+                        <td class="nameTable">12/03/17</td>
+                        <td class="nameTable">PASTA</td>
+                        <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="nameTable">ENTRADA</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nameTable">12434</td>
+                        <td class="nameTable">12/03/17</td>
+                        <td class="nameTable">PASTA</td>
+                        <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="nameTable">ENTRADA</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nameTable">12434</td>
+                        <td class="nameTable">12/03/17</td>
+                        <td class="nameTable">PASTA</td>
+                        <td class="nameTable"><img src="images/profile.png" class="imgProfile" alt=""></td>
+                        <td class="nameTable">SALIDA</td>
+                        <td class="nameTable">1283</td>
+                        <td class="nameTable">622</td>
+                        <td class="nameTable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu miDro">
+                                    <li>
+                                        <a class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                    </li>
+                                    <li>
+                                        <a class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Modal Entrada-->
+<div class="modal fade" id="Entrada" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="title">ENTRADA ARTICULOS</h1>
+            </div>
+            <div class="modal-body">
+                <form name="formEntradas" class="">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 mtb20">
+                            <div class=" backBlue1">
+                                <div id="custom-search-input">
+                                    <div class="input-group">
+                                        <input type="text" class="search-query form-control" placeholder="Buscar Articulo" />
+                                        <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaUno" name="fechaUno" mobiscroll-calendar="settingsInput" required ng-model="fechaUno"
+                                    placeholder="Fecha">
+                                <p class="textValid1 text-center" ng-show="formEntradas.fechaUno.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-inputs center-block" name="familia" id="familia" required ng-model="datos.familia" mobiscroll-select="settingsSelect">
+                                                    <option value="">Almacén familia</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                                <p class="textValid1 text-center" ng-show="formEntradas.familia.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-inputs center-block" name="proveedor" id="proveedor" required ng-model="datos.proveedor" mobiscroll-select="settingsSelect">
+                                                    <option value="">Proveedor</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                                <p class="textValid1 text-center" ng-show="formEntradas.proveedor.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-inputs" id="personal" name="personal" mobiscroll-calendar="settingsInput" required ng-model="personal"
+                                    placeholder="Personal que recibio">
+                                <p class="textValid1 text-center" ng-show="formEntradas.personal.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Código">
+                                <p class="textValid1 text-center" ng-show="formEntradas.codigo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Cantidad">
+                                <p class="textValid1 text-center" ng-show="formEntradas.codigo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Precio de compra">
+                                <p class="textValid1 text-center" ng-show="formEntradas.codigo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="comentarios" name="comentarios" required ng-model="datos.comentarios" placeholder="Comentarios"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                                <p class="textValid1 text-center" ng-show="formEntradas.comentarios.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formEntradas.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal salida-->
+<div class="modal fade" id="Salida" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="title">SALIDA ARTICULOS</h1>
+            </div>
+            <div class="modal-body">
+                <form name="formSalidas" class="">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 mtb20">
+                            <div class=" backBlue1">
+                                <div id="custom-search-input">
+                                    <div class="input-group">
+                                        <input type="text" class="search-query form-control" placeholder="Buscar Articulo" />
+                                        <span class="input-group-btn">
+                    <button class="btn" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input class="form-inputs" id="fechaUno" name="fechaUno" mobiscroll-calendar="settingsInput" required ng-model="fechaUno"
+                                    placeholder="Fecha">
+                                <p class="textValid1 text-center" ng-show="formSalidas.fechaUno.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-inputs center-block" name="familia" id="familia" required ng-model="datos.familia" mobiscroll-select="settingsSelect">
+                                                    <option value="">Almacén familia</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                                <p class="textValid1 text-center" ng-show="formSalidas.familia.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-inputs center-block" name="proveedor" id="proveedor" required ng-model="datos.proveedor" mobiscroll-select="settingsSelect">
+                                                    <option value="">Proveedor</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                    <option value="opciones">opcion</option>
+                                                </select>
+                                <p class="textValid1 text-center" ng-show="formSalidas.proveedor.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-inputs" id="personal" name="personal" mobiscroll-calendar="settingsInput" required ng-model="personal"
+                                    placeholder="Personal que entrego">
+                                <p class="textValid1 text-center" ng-show="formSalidas.personal.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-inputs" id="comentarios" name="comentarios" required ng-model="datos.comentarios" placeholder="Comentarios"
+                                    cols="30" rows="5" style="height:100px;"></textarea>
+                                <p class="textValid1 text-center" ng-show="formSalidas.comentarios.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Código">
+                                <p class="textValid1 text-center" ng-show="formSalidas.codigo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="codigo" name="codigo" required ng-model="datos.codigo" placeholder="Cantidad">
+                                <p class="textValid1 text-center" ng-show="formSalidas.codigo.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-inputs center-block" name="proveedor" id="proveedor" required ng-model="datos.proveedor" mobiscroll-select="settingsSelect">
+                                                    <option value="">Tipo de salida</option>
+                                                    <option value="opciones">Salida</option>
+                                                    <option value="opciones">Salida por mantenimiento</option>
+                                                </select>
+                                <p class="textValid1 text-center" ng-show="formSalidas.proveedor.$error.required">Campo obligatorio</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-inputs" id="unidad" name="unidad" required ng-model="datos.unidad" placeholder="Unidad asignada por  mantenimiento">
+                                <p class="textValid1 text-center" ng-show="formSalidas.unidad.$error.required">Campo obligatorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formSalidas.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

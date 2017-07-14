@@ -139,6 +139,21 @@ angular
               controller: 'ArticulosCtrl',
               controllerAs: 'articulos'
             })
+            .when('/entradasSalidas', {
+              templateUrl: 'views/entradassalidas.html',
+              controller: 'EntradassalidasCtrl',
+              controllerAs: 'entradasSalidas'
+            })
+            .when('/resguardos', {
+              templateUrl: 'views/resguardos.html',
+              controller: 'ResguardosCtrl',
+              controllerAs: 'resguardos'
+            })
+            .when('/perfilArticulo', {
+              templateUrl: 'views/perfilarticulo.html',
+              controller: 'PerfilarticuloCtrl',
+              controllerAs: 'perfilArticulo'
+            })
             .otherwise({
                 redirectTo: '/'
             });

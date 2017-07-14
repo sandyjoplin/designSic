@@ -110,7 +110,7 @@
                     </ul>
                 </div>
                 <li class="list-group-item menu" data-toggle="collapse" data-target="#facturacion" aria-expanded="false" aria-controls="facturacion">
-                    <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturacion<i class="fa fa-chevron-down pull-right"
+                    <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturación<i class="fa fa-chevron-down pull-right"
                         aria-hidden="true"></i>
                 </li>
                 <!--menu secundario-->
@@ -132,7 +132,7 @@
                 </div>
                 <!--menu secundario-->
                 <li class="list-group-item menu" data-toggle="collapse" data-target="#trafico" aria-expanded="false" aria-controls="trafico">
-                    <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Trafico<i class="fa fa-chevron-down pull-right"
+                    <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Tráfico<i class="fa fa-chevron-down pull-right"
                         aria-hidden="true"></i>
                 </li>
                 <!--menu secundario-->
@@ -188,13 +188,15 @@
                 </div>
                 <!--menu secundario-->
                 <li class="list-group-item menu" data-toggle="collapse" data-target="#almacen" aria-expanded="false" aria-controls="almacen">
-                    <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacen<i class="fa fa-chevron-down pull-right"
+                    <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacén<i class="fa fa-chevron-down pull-right"
                         aria-hidden="true"></i>
                 </li>
                 <!--menu secundario-->
                 <div class="collapse" id="almacen">
                     <ul class="submenu">
                         <li class=""><a href="#/articulos">Articulos</a></li>
+                        <li class=""><a href="#/entradasSalidas">Entradas y salidas</a></li>
+                        <li class=""><a href="#/resguardos">Resguardos</a></li>
                         <li class=""><a href="#/solicitudes">Solicitudes</a></li>
                     </ul>
                 </div>
@@ -342,7 +344,7 @@
                         </ul>
                     </div>
                     <li class="list-group-item menu" data-toggle="collapse" data-target="#facturacionUno" aria-expanded="false" aria-controls="facturacion">
-                        <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturacion<i class="fa fa-chevron-down pull-right"
+                        <i class="fa fa-clipboard fa-lg menuItem" aria-hidden="true"></i>Facturación<i class="fa fa-chevron-down pull-right"
                             aria-hidden="true"></i>
                     </li>
                     <!--menu secundario-->
@@ -371,7 +373,7 @@
                     </div>
                     <!--menu secundario-->
                     <li class="list-group-item menu" data-toggle="collapse" data-target="#traficoUno" aria-expanded="false" aria-controls="trafico">
-                        <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Trafico<i class="fa fa-chevron-down pull-right"
+                        <i class="fa fa-truck fa-lg menuItem" aria-hidden="true"></i>Tráfico<i class="fa fa-chevron-down pull-right"
                             aria-hidden="true"></i>
                     </li>
                     <!--menu secundario-->
@@ -441,17 +443,16 @@
                     </div>
                     <!--menu secundario-->
                     <li class="list-group-item menu" data-toggle="collapse" data-target="#almacenUno" aria-expanded="false" aria-controls="almacen">
-                        <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacen<i class="fa fa-chevron-down pull-right"
+                        <i class="fa fa-archive fa-lg menuItem" aria-hidden="true"></i>Almacén<i class="fa fa-chevron-down pull-right"
                             aria-hidden="true"></i>
                     </li>
                     <!--menu secundario-->
                     <div class="collapse" id="almacenUno">
                         <ul class="submenu">
-                            <li><a href="#⁄articulos">Articulos</a></li>
-                            <li><a href="">Menus almacen</a></li>
-                            <li><a href="">Menus almacen</a></li>
-                            <li><a href="">Menus almacen</a></li>
-                            <li><a href="">Menus almacen</a></li>
+                        <li class=""><a href="#/articulos">Articulos</a></li>
+                        <li class=""><a href="#/entradasSalidas">Entradas y salidas</a></li>
+                        <li class=""><a href="#/resguardos">Resguardos</a></li>
+                        <li class=""><a href="#/solicitudes">Solicitudes</a></li>
                         </ul>
                     </div>
                     <!--menu secundario-->
@@ -547,6 +548,9 @@
     <script src="scripts/controllers/unidades.js"></script>
     <script src="scripts/controllers/perfilunidad.js"></script>
     <script src="scripts/controllers/articulos.js"></script>
+    <script src="scripts/controllers/entradassalidas.js"></script>
+    <script src="scripts/controllers/resguardos.js"></script>
+    <script src="scripts/controllers/perfilarticulo.js"></script>
     <!-- endbuild -->
 </body>
 
