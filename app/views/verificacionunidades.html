@@ -2919,844 +2919,1048 @@
                 <h1 class="txtF1 text-center">REGISTRO DE MOTOCICLETAS</h1>
             </div>
             <div class="modal-body">
-                <form name="formMotocicletas" class="">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form-group">
-                                <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha"
-                                    placeholder="Fecha">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.fecha.$error.required">Campo obligatorio</p>
+                <div class="row">
+                    <ul class="miTab tabDefault">
+                        <li class="col25 text-center" ng-click="tabUnofn()">
+                            <a href="">
+                                 <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+                                    <br> Datos Unidad
+                                </a>
+                        </li>
+                        <li class="col25 text-center" ng-click="tabDosfn()">
+                            <a href="">
+                                    <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
+                                    <br> Estado general
+                                </a>
+                        </li>
+                        <li class="col25 text-center" ng-click="tabTresfn()">
+                            <a href="">
+                                  <i class="fa fa-users fa-lg" aria-hidden="true"></i>
+                                    <br> Personal y equipo
+                                </a>
+                        </li>
+                        <li class="col25 text-center" ng-click="tabCuatrofn()">
+                            <a href="">
+                                    <i class="fa fa-picture-o fa-lg" aria-hidden="true"></i>
+                                    <br> Imagenes
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div ng-show="tabU">
+                    <form action="">
+                        <div class="row"><br>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="date" mobiscroll-calendar="settingsInput" class="form-inputs" id="fecha" name="fecha" required ng-model="datos.fecha"
+                                        placeholder="Fecha">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.fecha.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="licencia" name="licencia" required ng-model="datos.licencia" placeholder="No de licencia">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.licencia.$error.required">Campo obligatorio</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="licencia" name="licencia" required ng-model="datos.licencia" placeholder="No de licencia">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.licencia.$error.required">Campo obligatorio</p>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre del Condutor">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.nombre.$error.required">Campo obligatorio</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.vigencia.$error.required">Campo obligatorio</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="nombre" name="nombre" required ng-model="datos.nombre" placeholder="Nombre del Condutor">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.nombre.$error.required">Campo obligatorio</p>
-                            </div>
+                        <div class="row p15">
+                            <div class="">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="titleTable">
+                                            <th class="text-center">RRECORRIDO</th>
+                                            <th class="text-center">SALIDA</th>
+                                            <th class="text-center">LLEGADA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="textForm ">Hora</td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input mobiscroll-time="settingsDate" class="form-inputs" id="horaSalida" name="horaSalida" required ng-model="datos.horaSalida"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.horaSalida.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input mobiscroll-time="settingsDate" class="form-inputs" id="horaLlegada" name="horaLlegada" required ng-model="datos.horaLlegada"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.horaLlegada.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm ">Kilometraje</td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="kilometrajeSalida" name="kilometrajeSalida" required ng-model="datos.kilometrajeSalida"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.kilometrajeSalida.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="kilometrajeLlegada" name="kilometrajeLlegada" required ng-model="datos.kilometrajeLlegada"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.kilometrajeLlegada.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm ">Combustible</td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="combustibleSalida" name="combustibleSalida" required ng-model="datos.combustibleSalida"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.combustibleSalida.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-inputs" id="combustibleLlegada" name="combustibleLlegada" required ng-model="datos.combustibleLlegada"
+                                                        placeholder="">
+                                                    <p class="textValid1 text-center" ng-show="formMotocicletas.combustibleLlegada.$error.required">Campo obligatorio</p>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="vigencia" name="vigencia" required ng-model="datos.vigencia" placeholder="Vigencia">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.vigencia.$error.required">Campo obligatorio</p>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row p15">
-                        <div class="">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="titleTable">
-                                        <th class="text-center">RRECORRIDO</th>
-                                        <th class="text-center">SALIDA</th>
-                                        <th class="text-center">LLEGADA</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="textForm ">Hora</td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input mobiscroll-time="settingsDate" class="form-inputs" id="horaSalida" name="horaSalida" required ng-model="datos.horaSalida"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.horaSalida.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input mobiscroll-time="settingsDate" class="form-inputs" id="horaLlegada" name="horaLlegada" required ng-model="datos.horaLlegada"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.horaLlegada.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm ">Kilometraje</td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="kilometrajeSalida" name="kilometrajeSalida" required ng-model="datos.kilometrajeSalida"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.kilometrajeSalida.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="kilometrajeLlegada" name="kilometrajeLlegada" required ng-model="datos.kilometrajeLlegada"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.kilometrajeLlegada.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm ">Combustible</td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="combustibleSalida" name="combustibleSalida" required ng-model="datos.combustibleSalida"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.combustibleSalida.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="form-group">
-                                                <input type="text" class="form-inputs" id="combustibleLlegada" name="combustibleLlegada" required ng-model="datos.combustibleLlegada"
-                                                    placeholder="">
-                                                <p class="textValid1 text-center" ng-show="formMotocicletas.combustibleLlegada.$error.required">Campo obligatorio</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <h4 class="p15">DATOS DE LA UNIDAD</h4>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form-group">
-                                <input mobiscroll-calendar="settingsInput" class="form-inputs" id="fechaServicio" name="fechaServicio" required ng-model="datos.fechaServicio"
-                                    placeholder="Fecha de Ultimo Servicio">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.fechaServicio.$error.required">Campo obligatorio</p>
+                        <div class="row">
+                            <h4 class="p15">DATOS DE LA UNIDAD</h4>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input mobiscroll-calendar="settingsInput" class="form-inputs" id="fechaServicio" name="fechaServicio" required ng-model="datos.fechaServicio"
+                                        placeholder="Fecha de Ultimo Servicio">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.fechaServicio.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="kmServicio" name="kmServicio" required ng-model="datos.kmServicio" placeholder="Kilometro de Ultimo Servicio">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.kmServicio.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="tipoServicio" name="tipoServicio" required ng-model="datos.tipoServicio" placeholder="Tipo de Ultimo Servicio">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.tipoServicio.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input mobiscroll-calendar="settingsInput" class="form-inputs" id="ultimaVerificacion" name="ultimaVerificacion" required
+                                        ng-model="datos.ultimaVerificacion" placeholder="Ultima verificación">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.ultimaVerificacion.$error.required">Campo obligatorio</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="kmServicio" name="kmServicio" required ng-model="datos.kmServicio" placeholder="Kilometro de Ultimo Servicio">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.kmServicio.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="tipoServicio" name="tipoServicio" required ng-model="datos.tipoServicio" placeholder="Tipo de Ultimo Servicio">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.tipoServicio.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input mobiscroll-calendar="settingsInput" class="form-inputs" id="ultimaVerificacion" name="ultimaVerificacion" required
-                                    ng-model="datos.ultimaVerificacion" placeholder="Ultima verificación">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.ultimaVerificacion.$error.required">Campo obligatorio</p>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="tipoUnidad" name="tipoUnidad" required ng-model="datos.tipoUnidad" placeholder="Tipo de Unidad">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.tipoUnidad.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="noEconomico" name="noEconomico" required ng-model="datos.noEconomico" placeholder="No Economico">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.noEconomico.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Modelo">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.modelo.$error.required">Campo obligatorio</p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Combustible">
+                                    <p class="textValid1 text-center" ng-show="formMotocicletas.modelo.$error.required">Campo obligatorio</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="tipoUnidad" name="tipoUnidad" required ng-model="datos.tipoUnidad" placeholder="Tipo de Unidad">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.tipoUnidad.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="noEconomico" name="noEconomico" required ng-model="datos.noEconomico" placeholder="No Economico">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.noEconomico.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Modelo">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.modelo.$error.required">Campo obligatorio</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-inputs" id="modelo" name="modelo" required ng-model="datos.modelo" placeholder="Combustible">
-                                <p class="textValid1 text-center" ng-show="formMotocicletas.modelo.$error.required">Campo obligatorio</p>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="submit" class="btn btns hvr-float-shadow pull-right" ng-click="administrador.identificacion(datos)" ng-disabled="formImagenes.$invalid">Guardar</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-danger hvr-float-shadow pull-left" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
 
-                    <div class="row p15">
-                        <h4>ESTADO GENERAL DE LA UNIDAD DE TRANSPORTE</h4>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="titleTable">
-                                        <th rowspan=2 class="text-center">CONCEPTO</th>
-                                        <th colspan=2 class="text-center">CUENTA CON</th>
-                                        <th rowspan=2 class="text-center">OBSERVACIONES</th>
-                                    </tr>
-                                    <tr class="titleTable text-center">
-                                        <td>SI</td>
-                                        <td>NO</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="textForm">Caja con candado</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                <div ng-show="tabD">
+                    <form action="">
+                        <div class="row p15">
+                            <h4>ESTADO GENERAL DE LA UNIDAD DE TRANSPORTE</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="titleTable">
+                                            <th rowspan=2 class="text-center">CONCEPTO</th>
+                                            <th colspan=2 class="text-center">CUENTA CON</th>
+                                            <th rowspan=2 class="text-center">OBSERVACIONES</th>
+                                        </tr>
+                                        <tr class="titleTable text-center">
+                                            <td>SI</td>
+                                            <td>NO</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="textForm">Caja con candado</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="candadoOb" name="candadoOb" required ng-model="datos.candadoOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="candadoOb" name="candadoOb" required ng-model="datos.candadoOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="titleTable">
+                                            <th rowspan=2 class="text-center">CONCEPTO</th>
+                                            <th colspan=2 class="text-center">ESTADO</th>
+                                            <th rowspan=2 class="text-center">OBSERVACIONES</th>
+                                        </tr>
+                                        <tr class="titleTable text-center">
+                                            <td>BIEN</td>
+                                            <td>MAL</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="textForm">Limpieza de area</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="limpiezaOb" name="limpiezaOb" required ng-model="datos.limpiezaOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Hojalateria</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="hojalateriaOb" name="hojalateriaOb" required ng-model="datos.hojalateriaOb"
+                                                    placeholder="" cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Pintura</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="pinturaOb" name="pinturaOb" required ng-model="datos.pinturaOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Luces</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="lucesOb" name="lucesOb" required ng-model="datos.lucesOb" placeholder="" cols="30"
+                                                    rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Mecanismo</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="mecanismoOb" name="mecanismoOb" required ng-model="datos.mecanismoOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Espejos laterales</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="espejosOb" name="espejosOb" required ng-model="datos.espejosOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Llantas</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="llantasOb" name="llantasOb" required ng-model="datos.llantasOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Claxón</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="claxonOb" name="claxonOb" required ng-model="datos.claxonOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr class="textForm">
+                                            <td>Nivel de aceite</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"></label>
+                                            </span>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
+                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
+                                                        <label for="sexo"> </label>
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-inputs" id="aceiteOb" name="aceiteOb" required ng-model="datos.aceiteOb" placeholder=""
+                                                    cols="30" rows="5" style="height:70px;"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <br>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="titleTable">
-                                        <th rowspan=2 class="text-center">CONCEPTO</th>
-                                        <th colspan=2 class="text-center">ESTADO</th>
-                                        <th rowspan=2 class="text-center">OBSERVACIONES</th>
-                                    </tr>
-                                    <tr class="titleTable text-center">
-                                        <td>BIEN</td>
-                                        <td>MAL</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="textForm">Limpieza de area</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="limpiezaOb" name="limpiezaOb" required ng-model="datos.limpiezaOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Hojalateria</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="hojalateriaOb" name="hojalateriaOb" required ng-model="datos.hojalateriaOb"
-                                                placeholder="" cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Pintura</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="pinturaOb" name="pinturaOb" required ng-model="datos.pinturaOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Luces</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="lucesOb" name="lucesOb" required ng-model="datos.lucesOb" placeholder="" cols="30"
-                                                rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Mecanismo</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="mecanismoOb" name="mecanismoOb" required ng-model="datos.mecanismoOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Espejos laterales</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="espejosOb" name="espejosOb" required ng-model="datos.espejosOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Llantas</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="llantasOb" name="llantasOb" required ng-model="datos.llantasOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Claxón</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="claxonOb" name="claxonOb" required ng-model="datos.claxonOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr class="textForm">
-                                        <td>Nivel de aceite</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"></label>
-                                            </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
-                                                        <input type="radio" name="" id="" value=""  required ng-model="" >
-                                                        <label for="sexo"> </label>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <textarea type="text" class="form-inputs" id="aceiteOb" name="aceiteOb" required ng-model="datos.aceiteOb" placeholder=""
-                                                cols="30" rows="5" style="height:70px;"></textarea>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="submit" class="btn btns hvr-float-shadow pull-right" ng-click="administrador.identificacion(datos)" ng-disabled="formImagenes.$invalid">Guardar</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-danger hvr-float-shadow pull-left" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
 
-                    <div class="row p15">
-                        <h4>PERSONAL</h4>
-                        <div class="">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="titleTable">
-                                        <th rowspan=2 class="text-center">CONCEPTO</th>
-                                        <th colspan=2 class="text-center">CUENTA CON </th>
-                                        <th colspan=2 class="text-center">ESTADO</th>
-                                    </tr>
-                                    <tr class="titleTable text-center">
-                                        <td>SI</td>
-                                        <td>NO</td>
-                                        <td>BIEN </td>
-                                        <td>MAL</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="textForm ">Teléfono o Radio</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                <div ng-show="tabT">
+                    <form action="">
+                        <div class="row p15">
+                            <h4>PERSONAL</h4>
+                            <div class="">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="titleTable">
+                                            <th rowspan=2 class="text-center">CONCEPTO</th>
+                                            <th colspan=2 class="text-center">CUENTA CON </th>
+                                            <th colspan=2 class="text-center">ESTADO</th>
+                                        </tr>
+                                        <tr class="titleTable text-center">
+                                            <td>SI</td>
+                                            <td>NO</td>
+                                            <td>BIEN </td>
+                                            <td>MAL</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="textForm ">Teléfono o Radio</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Manos libres</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Manos libres</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Tarjeta de circulación</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Tarjeta de circulación</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Tabla para anotar</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Tabla para anotar</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Credencial</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Credencial</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Folder de plastico</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Folder de plastico</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">flyers</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">flyers</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Guias</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Guias</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Plumas</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Plumas</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="row p15">
-                        <h4>EQUIPO DE SEGURIDAD</h4>
-                        <div class="">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="titleTable">
-                                        <th rowspan=2 class="text-center">CONCEPTO</th>
-                                        <th colspan=2 class="text-center">CUENTA CON </th>
-                                        <th colspan=2 class="text-center">ESTADO</th>
-                                    </tr>
-                                    <tr class="titleTable text-center">
-                                        <td>SI</td>
-                                        <td>NO</td>
-                                        <td>BIEN </td>
-                                        <td>MAL</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="textForm ">Casco</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                        <div class="row p15">
+                            <h4>EQUIPO DE SEGURIDAD</h4>
+                            <div class="">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="titleTable">
+                                            <th rowspan=2 class="text-center">CONCEPTO</th>
+                                            <th colspan=2 class="text-center">CUENTA CON </th>
+                                            <th colspan=2 class="text-center">ESTADO</th>
+                                        </tr>
+                                        <tr class="titleTable text-center">
+                                            <td>SI</td>
+                                            <td>NO</td>
+                                            <td>BIEN </td>
+                                            <td>MAL</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="textForm ">Casco</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Chamarra</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Chamarra</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Uniforme</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Uniforme</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Botas</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Botas</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="textForm">Implermeable</td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textForm">Implermeable</td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"></label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="radio radio-primary">
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="radio radio-primary">
                                                         <input type="radio" name="" id="" value=""  required ng-model="" >
                                                         <label for="sexo"> </label>
                                             </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row p15">
-                        <h4 class="">LIMPIEZA DE LAS UNIDADES</h4>
-                        <span class="text-center form-inputs">ESTADO</span>
-                        <div class="form-group">
-                            <div class="form-inputs">
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <span class="radio radio-primary">
+                        <div class="row p15">
+                            <h4 class="">LIMPIEZA DE LAS UNIDADES</h4>
+                            <span class="text-center form-inputs">ESTADO</span>
+                            <div class="form-group">
+                                <div class="form-inputs">
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
                                                           <input type="radio" name="sexo" id="sexo" value=""  required ng-model="datos.estado" >
                                                             <label for="sexo">  Bueno</label>
                                                          </span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <span class="radio radio-primary">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
                                                           <input type="radio" name="sexo" id="sexo" value=""  required ng-model="datos.estado" >
                                                             <label for="sexo">  Regular </label>
                                                           </span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <span class="radio radio-primary">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <span class="radio radio-primary">
                                                           <input type="radio" name="sexo" id="sexo" value=""  required ng-model="datos.estado" >
                                                             <label for="sexo">  Malo</label>
                                                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="textValid1 text-center" ng-show="formMotocicletas.estado.$error.required">Campo obligatorio</p>
+                            </div>
+
+                            <textarea type="text" class="form-inputs" id="observaciones" name="observaciones" required ng-model="datos.observaciones"
+                                placeholder="Observaciones" cols="30" rows="5" style="height:100px;"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="submit" class="btn btns hvr-float-shadow pull-right" ng-click="administrador.identificacion(datos)" ng-disabled="formImagenes.$invalid">Guardar</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-danger hvr-float-shadow pull-left" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="tabCu">
+                    <form action="formImagenes">
+                        <div class="row p15">
+                            <div class="row p10">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="p10">
+                                        <img src="images/motos/arriba.png" class="imgDoc" alt="">
+                                        <div class="desDoc">
+                                            <div class="row p5">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                    <span class="textDoc">IMAGÉN ARRIBA</span>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                    <span class="dropdown pull-right">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu ">
+                                                <li>
+                                                    <a data-toggle="modal" data-target="#documento" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-group">
+                        <span class="form-inputs"> 
+                                    <div class="carga-archivo-input text-center"> 
+                                        <span class=""><i class="fa fa-upload" aria-hidden="true"></i></span>
+                        <span class="carga-archivo-input-title">Seleccionar documento</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                    </div>
+                    </span>
+                </div>-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="p10">
+                                        <img src="images/motos/atras1.png" class="imgDoc" alt="">
+                                        <div class="desDoc">
+                                            <div class="row p5">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                    <span class="textDoc">IMAGÉN ATRAS</span>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                    <span class="dropdown pull-right">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu ">
+                                                <li>
+                                                    <a data-toggle="modal" data-target="#documento" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="p10">
+                                        <img src="images/motos/frente.png" class="imgDoc" alt="">
+                                        <div class="desDoc">
+                                            <div class="row p5">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                    <span class="textDoc">IMAGÉN FRENTE</span>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                    <span class="dropdown pull-right">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu ">
+                                                <li>
+                                                    <a data-toggle="modal" data-target="#documento" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="p10">
+                                        <img src="images/motos/der1.png" class="imgDoc" alt="">
+                                        <div class="desDoc">
+                                            <div class="row p5">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                    <span class="textDoc">IMAGÉN DERECHA</span>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                    <span class="dropdown pull-right">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu ">
+                                                <li>
+                                                    <a data-toggle="modal" data-target="#documento" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="p10">
+                                        <img src="images/motos/izq.png" class="imgDoc" alt="">
+                                        <div class="desDoc">
+                                            <div class="row p5">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                    <span class="textDoc">IMAGÉN IZQUIERDA</span>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                    <span class="dropdown pull-right">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-ellipsis-h fa-2x alignV" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu ">
+                                                <li>
+                                                    <a data-toggle="modal" data-target="#documento" class="textEdit"><i class="fa fa-pencil-square" aria-hidden="true"></i> Editar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="textDelete"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="textValid1 text-center" ng-show="formMotocicletas.estado.$error.required">Campo obligatorio</p>
                         </div>
-
-                        <textarea type="text" class="form-inputs" id="observaciones" name="observaciones" required ng-model="datos.observaciones"
-                            placeholder="Observaciones" cols="30" rows="5" style="height:100px;"></textarea>
-                    </div>
-                    <div class="row p15">
-                        <h1>IMAGÉN ARRIBA</h1>
-                        <h1>IMAGÉN ATRAS</h1>
-                        <h1>IMAGÉN FRENTE</h1>
-                        <h1>IMAGÉN DERECHA</h1>
-                        <h1>IMAGÉN IZQUIERDA</h1>
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <button type="submit" ng-click="main.empresa(datos)" ng-disabled="formMotocicletas.$invalid" class="btn btns hvr-float-shadow center-block">Guardar</button>
-                    </div>
-                    <br>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="submit" class="btn btns hvr-float-shadow pull-right" ng-click="administrador.identificacion(datos)" ng-disabled="formImagenes.$invalid">Guardar</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-danger hvr-float-shadow pull-left" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
