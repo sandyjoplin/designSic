@@ -1237,7 +1237,9 @@ color:  #5cb85c  !important;
 .col33 {
     width: 33%;
 }
-
+.col25{
+    width: 24%;
+}
 .miTab {
     padding: 10px 5px;
     width: 100%;

@@ -137,7 +137,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                 <h1 class="txtF1 text-center">NUEVO REGISTRO DE ASISTENCIAS</h1>
+                <h1 class="txtF1 text-center">NUEVO REGISTRO DE ASISTENCIAS</h1>
             </div>
             <div class="modal-body">
                 <form name="formAsistencias" class="">
@@ -194,13 +194,18 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div id="printSectionId">
-                <div class="modal-header">
+                <div class="backFormato1">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="text-center modal-title textNew " id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
-                    <h4 class="text-center textEdit">REGISTRO DE ASISTENCIAS</h4>
-                    <img src="images/logo.png" class="center-block" width="100px" alt="">
+                    <div class="row pt60">
+                        <div class="col-lg-12 pt60">
+                            <img src="images/logo.png" class="center-block" width="120px" alt="">
+                            <h3 class="txtF1 text-center" id="myModalLabel">DEPARTAMENTO DE VIGILANCIA</h3>
+                            <h4 class="txtF2 text-center">REGISTRO DE ASISTENCIAS</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
+                <br>
+                <div class="p5"><br>
                     <div class="table-responsive ">
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -341,7 +346,6 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                     <td></td>
-                                    <td></td>
                                 </tr>
                                 <tr style="height:40px;">
                                     <td class=""></td>
@@ -380,9 +384,15 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary hvr-float-shadow " ng-click="printToCart('printSectionId')">Imprimir formato</button>
-                <button type="button" class="btn btn-danger hvr-float-shadow" data-dismiss="modal">Cerrar</button>
+            <div class="backFormato2">
+                <div class="row pt60">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <button class="btn btn-primary hvr-float-shadow pull-right" ng-click="printToCart('printSectionId')">Imprimir formato</button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <button type="button" class="btn btn-danger hvr-float-shadow pull-left" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
