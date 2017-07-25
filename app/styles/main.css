@@ -885,7 +885,7 @@ input[type="date"].full:before {
 }
 .backFormato1{
   background: url('../images/back1.png') no-repeat center center;
-      height: 250px;
+      height: 240px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -893,7 +893,7 @@ input[type="date"].full:before {
 }
 .backFormato2{
     background: url('../images/back2.png') no-repeat center center;
-    height: 250px;
+    height: 240px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
